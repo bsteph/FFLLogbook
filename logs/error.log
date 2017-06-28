@@ -1,0 +1,478 @@
+2016-01-11 18:09:14 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Src could not be found.
+Exception Attributes: array (
+  'class' => 'Src',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /logbook2/src/Template/Gun/
+Stack Trace:
+#0 /Users/billstephens/htdocs/logbook2/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-01-11 18:12:45 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Src could not be found.
+Exception Attributes: array (
+  'class' => 'Src',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /logbook2/src/Template/Gun/
+Stack Trace:
+#0 /Users/billstephens/htdocs/logbook2/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-01-22 19:36:47 Error: [Cake\Controller\Exception\MissingComponentException] Component class TollbarComponent could not be found.
+Exception Attributes: array (
+  'class' => 'TollbarComponent',
+  'plugin' => 'DebugKit',
+)
+Request URL: /logbook2/
+Stack Trace:
+#0 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Core/ObjectRegistry.php(91): Cake\Controller\ComponentRegistry->_throwMissingClassError('Tollbar', 'DebugKit')
+#1 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(321): Cake\Core\ObjectRegistry->load('DebugKit.Tollba...', Array)
+#2 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(475): Cake\Controller\Controller->loadComponent('DebugKit.Tollba...', Array)
+#3 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(265): Cake\Controller\Controller->_loadComponents()
+#4 [internal function]: Cake\Controller\Controller->__construct(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Pages')
+#5 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Filter/ControllerFactoryFilter.php(91): ReflectionClass->newInstance(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Pages')
+#6 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Filter/ControllerFactoryFilter.php(50): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/DispatcherFilter.php(145): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#8 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventManager.php(389): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventManager.php(355): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#10 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#11 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(62): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#12 /Users/billstephens/htdocs/logbook2/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2016-01-22 19:37:27 Error: [RuntimeException] DebugKit is now loaded through plugin bootstrapping. Make sure you have `Plugin::load("DebugKit", ["bootstrap" => true]);` in your application's bootstrap.php.
+Request URL: /logbook2/
+Stack Trace:
+#0 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/ComponentRegistry.php(118): DebugKit\Controller\Component\ToolbarComponent->__construct(Object(Cake\Controller\ComponentRegistry), Array)
+#1 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Core/ObjectRegistry.php(93): Cake\Controller\ComponentRegistry->_create('DebugKit\\Contro...', 'Toolbar', Array)
+#2 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(321): Cake\Core\ObjectRegistry->load('DebugKit.Toolba...', Array)
+#3 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(475): Cake\Controller\Controller->loadComponent('DebugKit.Toolba...', Array)
+#4 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(265): Cake\Controller\Controller->_loadComponents()
+#5 [internal function]: Cake\Controller\Controller->__construct(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Pages')
+#6 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Filter/ControllerFactoryFilter.php(91): ReflectionClass->newInstance(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Pages')
+#7 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Filter/ControllerFactoryFilter.php(50): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/DispatcherFilter.php(145): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#9 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventManager.php(389): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventManager.php(355): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#11 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#12 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(62): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#13 /Users/billstephens/htdocs/logbook2/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2016-01-22 19:38:00 Error: [RuntimeException] DebugKit is now loaded through plugin bootstrapping. Make sure you have `Plugin::load("DebugKit", ["bootstrap" => true]);` in your application's bootstrap.php.
+Request URL: /logbook2/
+Stack Trace:
+#0 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/ComponentRegistry.php(118): DebugKit\Controller\Component\ToolbarComponent->__construct(Object(Cake\Controller\ComponentRegistry), Array)
+#1 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Core/ObjectRegistry.php(93): Cake\Controller\ComponentRegistry->_create('DebugKit\\Contro...', 'Toolbar', Array)
+#2 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(321): Cake\Core\ObjectRegistry->load('DebugKit.Toolba...', Array)
+#3 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(475): Cake\Controller\Controller->loadComponent('DebugKit.Toolba...', Array)
+#4 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(265): Cake\Controller\Controller->_loadComponents()
+#5 [internal function]: Cake\Controller\Controller->__construct(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Pages')
+#6 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Filter/ControllerFactoryFilter.php(91): ReflectionClass->newInstance(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Pages')
+#7 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Filter/ControllerFactoryFilter.php(50): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/DispatcherFilter.php(145): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#9 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventManager.php(389): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventManager.php(355): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#11 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#12 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(62): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#13 /Users/billstephens/htdocs/logbook2/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2016-01-22 19:39:40 Error: [RuntimeException] DebugKit is now loaded through plugin bootstrapping. Make sure you have `Plugin::load("DebugKit", ["bootstrap" => true]);` in your application's bootstrap.php.
+Request URL: /logbook2/
+Stack Trace:
+#0 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/ComponentRegistry.php(118): DebugKit\Controller\Component\ToolbarComponent->__construct(Object(Cake\Controller\ComponentRegistry), Array)
+#1 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Core/ObjectRegistry.php(93): Cake\Controller\ComponentRegistry->_create('DebugKit\\Contro...', 'Toolbar', Array)
+#2 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(321): Cake\Core\ObjectRegistry->load('DebugKit.Toolba...', Array)
+#3 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(475): Cake\Controller\Controller->loadComponent('DebugKit.Toolba...', Array)
+#4 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(265): Cake\Controller\Controller->_loadComponents()
+#5 [internal function]: Cake\Controller\Controller->__construct(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Pages')
+#6 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Filter/ControllerFactoryFilter.php(91): ReflectionClass->newInstance(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Pages')
+#7 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Filter/ControllerFactoryFilter.php(50): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/DispatcherFilter.php(145): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#9 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventManager.php(389): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventManager.php(355): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#11 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#12 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(62): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#13 /Users/billstephens/htdocs/logbook2/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2016-01-22 19:44:06 Error: [RuntimeException] DebugKit is now loaded through plugin bootstrapping. Make sure you have `Plugin::load("DebugKit", ["bootstrap" => true]);` in your application's bootstrap.php.
+Request URL: /logbook2/
+Stack Trace:
+#0 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/ComponentRegistry.php(118): DebugKit\Controller\Component\ToolbarComponent->__construct(Object(Cake\Controller\ComponentRegistry), Array)
+#1 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Core/ObjectRegistry.php(93): Cake\Controller\ComponentRegistry->_create('DebugKit\\Contro...', 'Toolbar', Array)
+#2 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(321): Cake\Core\ObjectRegistry->load('DebugKit.Toolba...', Array)
+#3 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(475): Cake\Controller\Controller->loadComponent('DebugKit.Toolba...', Array)
+#4 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(265): Cake\Controller\Controller->_loadComponents()
+#5 [internal function]: Cake\Controller\Controller->__construct(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Pages')
+#6 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Filter/ControllerFactoryFilter.php(91): ReflectionClass->newInstance(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Pages')
+#7 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Filter/ControllerFactoryFilter.php(50): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/DispatcherFilter.php(145): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#9 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventManager.php(389): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventManager.php(355): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#11 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#12 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(62): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#13 /Users/billstephens/htdocs/logbook2/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2016-01-22 19:49:36 Error: [RuntimeException] DebugKit is now loaded through plugin bootstrapping. Make sure you have `Plugin::load("DebugKit", ["bootstrap" => true]);` in your application's bootstrap.php.
+Request URL: /logbook2/
+Stack Trace:
+#0 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/ComponentRegistry.php(118): DebugKit\Controller\Component\ToolbarComponent->__construct(Object(Cake\Controller\ComponentRegistry), Array)
+#1 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Core/ObjectRegistry.php(93): Cake\Controller\ComponentRegistry->_create('DebugKit\\Contro...', 'Toolbar', Array)
+#2 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(321): Cake\Core\ObjectRegistry->load('DebugKit.Toolba...', Array)
+#3 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(475): Cake\Controller\Controller->loadComponent('DebugKit.Toolba...', Array)
+#4 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(265): Cake\Controller\Controller->_loadComponents()
+#5 [internal function]: Cake\Controller\Controller->__construct(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Pages')
+#6 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Filter/ControllerFactoryFilter.php(91): ReflectionClass->newInstance(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Pages')
+#7 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Filter/ControllerFactoryFilter.php(50): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/DispatcherFilter.php(145): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#9 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventManager.php(389): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventManager.php(355): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#11 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#12 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(62): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#13 /Users/billstephens/htdocs/logbook2/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2016-01-22 19:50:08 Error: [RuntimeException] DebugKit is now loaded through plugin bootstrapping. Make sure you have `Plugin::load("DebugKit", ["bootstrap" => true]);` in your application's bootstrap.php.
+Request URL: /logbook2/
+Stack Trace:
+#0 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/ComponentRegistry.php(118): DebugKit\Controller\Component\ToolbarComponent->__construct(Object(Cake\Controller\ComponentRegistry), Array)
+#1 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Core/ObjectRegistry.php(93): Cake\Controller\ComponentRegistry->_create('DebugKit\\Contro...', 'Toolbar', Array)
+#2 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(321): Cake\Core\ObjectRegistry->load('DebugKit.Toolba...', Array)
+#3 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(475): Cake\Controller\Controller->loadComponent('DebugKit.Toolba...', Array)
+#4 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(265): Cake\Controller\Controller->_loadComponents()
+#5 [internal function]: Cake\Controller\Controller->__construct(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Pages')
+#6 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Filter/ControllerFactoryFilter.php(91): ReflectionClass->newInstance(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Pages')
+#7 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Filter/ControllerFactoryFilter.php(50): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/DispatcherFilter.php(145): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#9 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventManager.php(389): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventManager.php(355): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#11 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#12 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(62): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#13 /Users/billstephens/htdocs/logbook2/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2016-01-22 22:52:25 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Index.ctp could not be found.
+Exception Attributes: array (
+  'class' => 'Index.ctp',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /logbook2/index.ctp
+Stack Trace:
+#0 /Users/billstephens/htdocs/logbook2/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-01-22 22:53:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class View.ctp could not be found.
+Exception Attributes: array (
+  'class' => 'View.ctp',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /logbook2/view.ctp
+Stack Trace:
+#0 /Users/billstephens/htdocs/logbook2/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-01-25 18:02:48 Error: Fatal Error (1): Call to a member function find() on boolean in [/Users/billstephens/htdocs/logbook2/src/Controller/GunController.php, line 26]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 209
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 92
+[main] - [internal], line ??
+
+
+
+2016-01-25 18:02:48 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /logbook2/gun
+Stack Trace:
+#0 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(92): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Users/billstep...', 26)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-25 18:44:26 Error: [BadMethodCallException] Unknown method "loadComponent"
+Request URL: /logbook2/gun
+Stack Trace:
+#0 /Users/billstephens/htdocs/logbook2/src/Model/Table/GunTable.php(33): Cake\ORM\Table->__call('loadComponent', Array)
+#1 /Users/billstephens/htdocs/logbook2/src/Model/Table/GunTable.php(33): App\Model\Table\GunTable->loadComponent('Search.Prg', Array)
+#2 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/ORM/Table.php(282): App\Model\Table\GunTable->initialize(Array)
+#3 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php(201): Cake\ORM\Table->__construct(Array)
+#4 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php(169): Cake\ORM\Locator\TableLocator->_create(Array)
+#5 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php(114): Cake\ORM\Locator\TableLocator->get('Gun')
+#6 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(346): Cake\Controller\Controller->loadModel('Gun')
+#7 /Users/billstephens/htdocs/logbook2/src/Controller/GunController.php(21): Cake\Controller\Controller->__get('Gun')
+#8 [internal function]: App\Controller\GunController->index()
+#9 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(429): call_user_func_array(Array, Array)
+#10 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#11 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\GunController))
+#12 /Users/billstephens/htdocs/logbook2/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2016-01-25 19:00:48 Error: [BadMethodCallException] Unknown method "searchManager"
+Request URL: /logbook2/gun
+Stack Trace:
+#0 /Users/billstephens/htdocs/logbook2/src/Model/Table/GunTable.php(33): Cake\ORM\Table->__call('searchManager', Array)
+#1 /Users/billstephens/htdocs/logbook2/src/Model/Table/GunTable.php(33): App\Model\Table\GunTable->searchManager()
+#2 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/ORM/Table.php(282): App\Model\Table\GunTable->initialize(Array)
+#3 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php(201): Cake\ORM\Table->__construct(Array)
+#4 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php(169): Cake\ORM\Locator\TableLocator->_create(Array)
+#5 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php(114): Cake\ORM\Locator\TableLocator->get('Gun')
+#6 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(346): Cake\Controller\Controller->loadModel('Gun')
+#7 /Users/billstephens/htdocs/logbook2/src/Controller/GunController.php(21): Cake\Controller\Controller->__get('Gun')
+#8 [internal function]: App\Controller\GunController->index()
+#9 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(429): call_user_func_array(Array, Array)
+#10 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#11 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\GunController))
+#12 /Users/billstephens/htdocs/logbook2/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2016-01-25 19:07:40 Error: [BadMethodCallException] Unknown method "searchManager"
+Request URL: /logbook2/gun
+Stack Trace:
+#0 /Users/billstephens/htdocs/logbook2/src/Model/Table/GunTable.php(33): Cake\ORM\Table->__call('searchManager', Array)
+#1 /Users/billstephens/htdocs/logbook2/src/Model/Table/GunTable.php(33): App\Model\Table\GunTable->searchManager()
+#2 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/ORM/Table.php(282): App\Model\Table\GunTable->initialize(Array)
+#3 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php(201): Cake\ORM\Table->__construct(Array)
+#4 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php(169): Cake\ORM\Locator\TableLocator->_create(Array)
+#5 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php(114): Cake\ORM\Locator\TableLocator->get('Gun')
+#6 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(346): Cake\Controller\Controller->loadModel('Gun')
+#7 /Users/billstephens/htdocs/logbook2/src/Controller/GunController.php(21): Cake\Controller\Controller->__get('Gun')
+#8 [internal function]: App\Controller\GunController->index()
+#9 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(429): call_user_func_array(Array, Array)
+#10 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#11 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\GunController))
+#12 /Users/billstephens/htdocs/logbook2/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2016-01-25 19:11:32 Error: [BadMethodCallException] Unknown method "searchManager"
+Request URL: /logbook2/gun
+Stack Trace:
+#0 /Users/billstephens/htdocs/logbook2/src/Model/Table/GunTable.php(33): Cake\ORM\Table->__call('searchManager', Array)
+#1 /Users/billstephens/htdocs/logbook2/src/Model/Table/GunTable.php(33): App\Model\Table\GunTable->searchManager()
+#2 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/ORM/Table.php(282): App\Model\Table\GunTable->initialize(Array)
+#3 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php(201): Cake\ORM\Table->__construct(Array)
+#4 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php(169): Cake\ORM\Locator\TableLocator->_create(Array)
+#5 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php(114): Cake\ORM\Locator\TableLocator->get('Gun')
+#6 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(346): Cake\Controller\Controller->loadModel('Gun')
+#7 /Users/billstephens/htdocs/logbook2/src/Controller/GunController.php(21): Cake\Controller\Controller->__get('Gun')
+#8 [internal function]: App\Controller\GunController->index()
+#9 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(429): call_user_func_array(Array, Array)
+#10 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#11 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\GunController))
+#12 /Users/billstephens/htdocs/logbook2/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2016-01-25 19:22:29 Error: Fatal Error (1): Call to a member function find() on boolean in [/Users/billstephens/htdocs/logbook2/src/Controller/GunController.php, line 26]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 209
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 92
+[main] - [internal], line ??
+
+
+
+2016-01-25 19:22:29 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /logbook2/gun
+Stack Trace:
+#0 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(92): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Users/billstep...', 26)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-25 19:26:07 Error: [BadMethodCallException] Unknown method "filterParams"
+Request URL: /logbook2/gun
+Stack Trace:
+#0 /Users/billstephens/htdocs/logbook2/src/Controller/GunController.php(26): Cake\ORM\Table->__call('filterParams', Array)
+#1 /Users/billstephens/htdocs/logbook2/src/Controller/GunController.php(26): App\Model\Table\GunTable->filterParams(Array)
+#2 [internal function]: App\Controller\GunController->index()
+#3 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(429): call_user_func_array(Array, Array)
+#4 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\GunController))
+#6 /Users/billstephens/htdocs/logbook2/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-10 19:28:44 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [/Users/billstephens/htdocs/logbook2/src/Template/Gun/index.ctp, line 13]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 209
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 92
+[main] - [internal], line ??
+
+
+
+2016-02-10 19:28:44 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /logbook2/gun
+Stack Trace:
+#0 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(92): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/Users/billstep...', 13)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-10 19:32:51 Error: [Cake\Controller\Exception\MissingActionException] Action GunController::search() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'GunController',
+  'action' => 'search',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /logbook2/gun/search
+Stack Trace:
+#0 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 /Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\GunController))
+#2 /Users/billstephens/htdocs/logbook2/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-02-10 19:40:20 Warning: Warning (2): htmlspecialchars(): charset `Serial Number' not supported, assuming utf-8 in [/Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Core/functions.php, line 68]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 140
+htmlspecialchars - [internal], line ??
+h - CORE/src/Core/functions.php, line 68
+include - APP/Template/Gun/index.ctp, line 46
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 992
+Cake\View\View::_render() - CORE/src/View/View.php, line 952
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-02-10 19:40:20 Warning: Warning (2): htmlspecialchars() [<a href='http://php.net/function.htmlspecialchars'>function.htmlspecialchars</a>]: charset `Manufacturer' not supported, assuming utf-8 in [/Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Core/functions.php, line 68]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 140
+htmlspecialchars - [internal], line ??
+h - CORE/src/Core/functions.php, line 68
+include - APP/Template/Gun/index.ctp, line 47
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 992
+Cake\View\View::_render() - CORE/src/View/View.php, line 952
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-02-10 19:40:20 Warning: Warning (2): htmlspecialchars() [<a href='http://php.net/function.htmlspecialchars'>function.htmlspecialchars</a>]: charset `Importer' not supported, assuming utf-8 in [/Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Core/functions.php, line 68]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 140
+htmlspecialchars - [internal], line ??
+h - CORE/src/Core/functions.php, line 68
+include - APP/Template/Gun/index.ctp, line 48
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 992
+Cake\View\View::_render() - CORE/src/View/View.php, line 952
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-02-10 19:40:20 Warning: Warning (2): htmlspecialchars() [<a href='http://php.net/function.htmlspecialchars'>function.htmlspecialchars</a>]: charset `Model' not supported, assuming utf-8 in [/Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Core/functions.php, line 68]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 140
+htmlspecialchars - [internal], line ??
+h - CORE/src/Core/functions.php, line 68
+include - APP/Template/Gun/index.ctp, line 49
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 992
+Cake\View\View::_render() - CORE/src/View/View.php, line 952
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-02-10 19:40:20 Warning: Warning (2): htmlspecialchars() [<a href='http://php.net/function.htmlspecialchars'>function.htmlspecialchars</a>]: charset `Caliber' not supported, assuming utf-8 in [/Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Core/functions.php, line 68]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 140
+htmlspecialchars - [internal], line ??
+h - CORE/src/Core/functions.php, line 68
+include - APP/Template/Gun/index.ctp, line 50
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 992
+Cake\View\View::_render() - CORE/src/View/View.php, line 952
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-02-10 19:40:20 Warning: Warning (2): htmlspecialchars() [<a href='http://php.net/function.htmlspecialchars'>function.htmlspecialchars</a>]: charset `Action' not supported, assuming utf-8 in [/Users/billstephens/htdocs/logbook2/vendor/cakephp/cakephp/src/Core/functions.php, line 68]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 140
+htmlspecialchars - [internal], line ??
+h - CORE/src/Core/functions.php, line 68
+include - APP/Template/Gun/index.ctp, line 51
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 992
+Cake\View\View::_render() - CORE/src/View/View.php, line 952
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-02-11 02:44:57 Warning: Warning (2): Invalid argument supplied for foreach() in [/Users/billstephens/htdocs/logbook2/src/Controller/GunController.php, line 22]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 140
+App\Controller\GunController::search() - APP/Controller/GunController.php, line 22
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-02-11 02:46:08 Warning: Warning (2): Invalid argument supplied for foreach() in [/Users/billstephens/htdocs/logbook2/src/Controller/GunController.php, line 22]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 140
+App\Controller\GunController::search() - APP/Controller/GunController.php, line 22
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2017-06-27 19:32:21 Error: [RuntimeException] Unable to locate an object compatible with paginate. in /Applications/MAMP/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php on line 713
+Request URL: /gunlog
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/logbook2/src/Controller/GunlogController.php(23): Cake\Controller\Controller->paginate(false)
+#1 /Applications/MAMP/htdocs/logbook2/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\GunLogController->index()
+#2 /Applications/MAMP/htdocs/logbook2/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#3 /Applications/MAMP/htdocs/logbook2/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\GunLogController))
+#4 /Applications/MAMP/htdocs/logbook2/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/logbook2/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 {main}
+
+
