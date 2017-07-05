@@ -1,6 +1,6 @@
 <?php
 namespace App\Model\Table;
-
+use Search\Manager;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
@@ -29,6 +29,32 @@ class GunTable extends Table
     public function initialize(array $config)
     {
         parent::initialize($config);
+        // Add the behaviour to your table
+        $this->addBehavior('Search.Search');
+
+        // Setup search filter using search manager
+        $this->searchManager()
+            ->value('ID_GUN')
+            // Here we will alias the 'q' query param to search the `Articles.title`
+            // field and the `Articles.content` field, using a LIKE match, with `%`
+            // both before and after.
+            ->add('SERIAL', 'Search.Like', [
+                'before' => true,
+                'after' => true,
+                'fieldMode' => 'OR',
+                'comparison' => 'LIKE',
+                'wildcardAny' => '*',
+                'wildcardOne' => '?',
+                'field' => ['SERIAL']
+            ])
+            ->add('foo', 'Search.Callback', [
+                'callback' => function ($query, $args, $filter) {
+                    // Modify $query as required
+                }
+            ]);
+
+
+
 
         $this->setTable('gun');
         $this->setDisplayField('ID_GUN');

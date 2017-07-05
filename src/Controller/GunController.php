@@ -20,10 +20,21 @@ class GunController extends AppController
      */
     public function index()
     {
-        $gun = $this->paginate($this->Gun);
 
-        $this->set(compact('gun'));
-        $this->set('_serialize', ['gun']);
+        $query = $this->Gun
+            // Use the plugins 'search' custom finder and pass in the
+            // processed query params
+            ->find('search', ['search' => $this->request->query]);
+            // You can add extra things to the query if you need to
+//            ->contain(['Comments'])
+            //->where(['title IS NOT' => null]);
+
+        $this->set('gun', $this->paginate($query));
+
+        //$gun = $this->paginate($this->Gun);
+
+        //$this->set(compact('gun'));
+        //$this->set('_serialize', ['gun']);
     }
 
     /**
