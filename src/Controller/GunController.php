@@ -50,6 +50,19 @@ class GunController extends AppController
      */
     public function add()
     {
+        $this->loadModel("Fields");
+        $mfg = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'GUN_MFG_F'])->toArray();
+        $this->set('mfgs',$mfg);
+        $caliber = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'CALIBER_F'])->toArray();
+        $this->set('caliber',$caliber);
+        $type_firearm = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'TYPE_FIREARM_F'])->toArray();
+        $this->set('type_firearm',$type_firearm);
         $gun = $this->Gun->newEntity();
         if ($this->request->is('post')) {
             $gun = $this->Gun->patchEntity($gun, $this->request->getData());
