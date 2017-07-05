@@ -20,10 +20,21 @@ class GunController extends AppController
      */
     public function index()
     {
-        $gun = $this->paginate($this->Gun);
 
-        $this->set(compact('gun'));
-        $this->set('_serialize', ['gun']);
+        $query = $this->Gun
+            // Use the plugins 'search' custom finder and pass in the
+            // processed query params
+            ->find('search', ['search' => $this->request->query]);
+            // You can add extra things to the query if you need to
+//            ->contain(['Comments'])
+            //->where(['title IS NOT' => null]);
+
+        $this->set('gun', $this->paginate($query));
+
+        //$gun = $this->paginate($this->Gun);
+
+        //$this->set(compact('gun'));
+        //$this->set('_serialize', ['gun']);
     }
 
     /**
@@ -50,6 +61,19 @@ class GunController extends AppController
      */
     public function add()
     {
+        $this->loadModel("Fields");
+        $mfg = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'GUN_MFG_F'])->toArray();
+        $this->set('mfgs',$mfg);
+        $caliber = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'CALIBER_F'])->toArray();
+        $this->set('caliber',$caliber);
+        $type_firearm = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'TYPE_FIREARM_F'])->toArray();
+        $this->set('type_firearm',$type_firearm);
         $gun = $this->Gun->newEntity();
         if ($this->request->is('post')) {
             $gun = $this->Gun->patchEntity($gun, $this->request->getData());
