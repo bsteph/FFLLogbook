@@ -321,6 +321,6 @@ return [
      * To use database sessions, load the SQL file located at config/Schema/sessions.sql
      */
     'Session' => [
-        'defaults' => 'php',
+        'defaults' => 'cache',
     ],
 ];
