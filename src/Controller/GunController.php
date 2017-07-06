@@ -1,7 +1,10 @@
 <?php
 namespace App\Controller;
 
+
 use App\Controller\AppController;
+
+
 
 /**
  * Gun Controller
@@ -18,16 +21,44 @@ class GunController extends AppController
      *
      * @return \Cake\Http\Response|void
      */
+
+    public function search()
+    {
+        if ($this->request->is('post')) {
+//            $gun = $this->Gun->patchEntity($gun, $this->request->getData());
+            //if ($this->Gun->save($gun)) {
+             //   $this->Flash->success(__('The gun has been saved.'));
+            //if($this->request->)
+            //$co_acq = $this->request->
+            $this->request->session()->write(['CO_ACQ','CO_ACQ']);
+          //  $this->request->session()->write('SERIAL','SERIAL');
+            //$postvars=$this->request->data['SERIAL']['SERIAL'];
+            $serial=$this->request->getData('SERIAL');
+            $coacq=$this->request->getData('CO_ACQ');
+
+            return $this->redirect(['action' => 'index','?'=>['CO_ACQ'=>$coacq,'SERIAL'=>$serial]]);
+  //          }
+    //        $this->Flash->error(__('The gun could not be saved. Please, try again.'));
+        }
+        $this->set(compact('gun'));
+        $this->set('_serialize', ['gun']);
+
+    }
     public function index()
     {
-
-        $query = $this->Gun
+        $serial=$this->request->getData('SERIAL');
+        $coacq=$this->request->getData('CO_ACQ');
+  //      $query = $this->Gun
             // Use the plugins 'search' custom finder and pass in the
             // processed query params
-            ->find('search', ['search' => $this->request->query]);
+            //->find('search', ['search' => $this->request->query]);
+ //           ->find('search',array('conditions'=> array('SERIAL'=>$serial,'or' => array('CO_ACQ' => $coacq))));
             // You can add extra things to the query if you need to
 //            ->contain(['Comments'])
             //->where(['title IS NOT' => null]);
+        $query = $this->Gun->find('all')
+            ->where(['SERIAL LIKE' => '%' . $serial . '%'])
+            ->orWhere(['CO_ACQ LIKE' => '%' . $coacq . '%']);;
 
         $this->set('gun', $this->paginate($query));
 
