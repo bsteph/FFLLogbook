@@ -36,7 +36,7 @@ class GunTable extends Table
         $this->searchManager()
             ->value('ID_GUN')
             // Here we will alias the 'q' query param to search the `Articles.title`
-            // field and the `Articles.content` field, using a LIKE match, with `%`
+           // field and the `Articles.content` field, using a LIKE match, with `%`
             // both before and after.
             ->add('SERIAL', 'Search.Like', [
                 'before' => true,
@@ -52,25 +52,8 @@ class GunTable extends Table
                     // Modify $query as required
                 }
             ]);
-        $this->searchManager()
-            ->value('ID_GUN')
-            // Here we will alias the 'q' query param to search the `Articles.title`
-            // field and the `Articles.content` field, using a LIKE match, with `%`
-            // both before and after.
-           ->add('CO_ACQ', 'Search.Like', [
-                'before' => true,
-                'after' => true,
-                'fieldMode' => 'OR',
-                'comparison' => 'LIKE',
-                'wildcardAny' => '*',
-                'wildcardOne' => '?',
-                'field' => ['CO_ACQ']
-            ])
-            ->add('foo', 'Search.Callback', [
-                'callback' => function ($query, $args, $filter) {
-                    // Modify $query as required
-                }
-            ]);
+
+
 
 
         $this->setTable('gun');
@@ -248,13 +231,14 @@ class GunTable extends Table
             ->allowEmpty('EDIT_REASON');
 
         $validator
+            ->boolean('PERSONAL')
             ->requirePresence('PERSONAL', 'create')
             ->notEmpty('PERSONAL');
 
         $validator
             ->boolean('NFA')
             ->requirePresence('NFA', 'create')
-            ->notEmpty('NFA');
+            ->allowEmpty('NFA');
 
         $validator
             ->allowEmpty('STATUS');
@@ -264,13 +248,13 @@ class GunTable extends Table
 
         $validator
             ->dateTime('NICS_TIMEAT')
-            ->requirePresence('NICS_TIMEAT', 'create')
-            ->notEmpty('NICS_TIMEAT');
+          //  ->requirePresence('NICS_TIMEAT', 'create')
+            ->allowEmpty('NICS_TIMEAT');
 
         $validator
             ->dateTime('NICS_EXPIRE')
-            ->requirePresence('NICS_EXPIRE', 'create')
-            ->notEmpty('NICS_EXPIRE');
+      //      ->requirePresence('NICS_EXPIRE', 'create')
+            ->allowEmpty('NICS_EXPIRE');
 
         $validator
             ->allowEmpty('NICS_NUMBER');

@@ -17,15 +17,16 @@
             echo $this->Form->control('SERIAL');
             echo $this->Form->label('MFG','MANUFACTURER');
             echo $this->Form->select('MFG',$mfgs);
+            echo $this->Form->control('MFG');
             echo $this->Form->control('IMPORTER');
             echo $this->Form->control('MODEL');
             echo $this->Form->label('CALIBER','CALIBER');
             echo $this->Form->select('CALIBER',$caliber);
+            echo $this->Form->control('CALIBER');
             echo $this->Form->control('ACTION');
             echo $this->Form->label('TYPE','FIREARMTYPE');
             echo $this->Form->select('TYPE',$type_firearm);
-            echo $this->Form->control('ANT');
-            echo $this->Form->control('CR');
+            echo $this->Form->control('TYPE');
             echo $this->Form->control('STDCAP');
             echo $this->Form->control('MATERIAL');
             echo $this->Form->control('FINISH');
@@ -42,11 +43,15 @@
             echo $this->Form->control('STATE_ACQ');
             echo $this->Form->control('ZIP_ACQ');
             echo $this->Form->control('TEL_ACQ');
-            echo $this->Form->control('FAX_ACQ');
             echo $this->Form->control('EMAIL_ACQ');
             echo $this->Form->control('WEB_ACQ');
             echo $this->Form->control('NOTES');
             echo $this->Form->control('PERSONAL');
+            echo $this->Form->control('NFA');
+            echo $this->Form->control('CR_ELIGIBLE');
+            echo $this->Form->control('ANT');
+            echo $this->Form->control('CR');
+
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
