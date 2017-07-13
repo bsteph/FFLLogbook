@@ -45,22 +45,20 @@ class GunController extends AppController
     {
         $serial=$this->request->getData('SERIAL');
         $coacq=$this->request->getData('CO_ACQ');
-        if ($serial=='') {
-            $serial='9999999999';
+        if (empty($serial) and !empty($coacq)) {
+            $query = $this->Gun->find('all')
+                ->where(['CO_ACQ LIKE' => '%' . $coacq . '%']);
+
+        } elseif (empty($coacq) and !empty($serial)){
+            $query = $this->Gun->find('all')
+                ->where(['SERIAL LIKE' => '%' . $serial . '%']);
+        } elseif (!empty($coacq) and !empty($serial)) {
+            $query = $this->Gun->find('all')
+                ->where(['SERIAL LIKE' => '%' . $serial . '%'])
+                ->orWhere(['CO_ACQ LIKE' => '%' . $coacq . '%']);;
+        } else {
+            $query = $this->Gun->find('all');
         }
-        if ($coacq==''){
-            $coacq='Bubba Gump Shrimp Company';
-        }
-        //$query = $this->Gun
-            // Use the plugins 'search' custom finder and pass in the
-            // processed query params
-       //     ->find('search', ['search' => $this->request->query]);
-            // You can add extra things to the query if you need to
-//            ->contain(['Comments'])
-            //->where(['title IS NOT' => null]);
-        $query = $this->Gun->find('all')
-            ->where(['SERIAL LIKE' => '%' . $serial . '%'])
-            ->orWhere(['CO_ACQ LIKE' => '%' . $coacq . '%']);;
 
         $this->set('gun', $this->paginate($query));
 
