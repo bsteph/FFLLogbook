@@ -9,6 +9,7 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Gun'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Search'), ['action' => 'search']) ?></li>
     </ul>
 </nav>
 <div class="gun index large-9 medium-12 columns content  ">
