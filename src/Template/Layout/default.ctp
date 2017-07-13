@@ -35,11 +35,15 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </head>
 <body>
     <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large- medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-            </li>
+<!--        <ul class="title-area large- medium-4 columns">-->
+<!--        <ul class="left">-->
+        <section class="top-bar-section">
+            <ul class="left">
+            <li><?php echo $this->Html->link("Gun",array('controller'=>'Gun','action'=>'index'));?></li>
+            <li><?php echo $this->Html->link("Fields",array('controller'=>'Fields','action'=>'index','full_base'=>true));?></li>
+            <li><?php echo $this->Html->link("Log",array('controller'=>'GunLog','action'=>'index','full_base'=>true));?></li>
         </ul>
+        </section>
         <section class="top-bar-section">
             <ul class="right">
                 <li><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></li>

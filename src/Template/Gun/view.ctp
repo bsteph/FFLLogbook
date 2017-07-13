@@ -7,10 +7,12 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
+
         <li><?= $this->Html->link(__('Edit Gun'), ['action' => 'edit', $gun->ID_GUN]) ?> </li>
         <li><?= $this->Form->postLink(__('Delete Gun'), ['action' => 'delete', $gun->ID_GUN], ['confirm' => __('Are you sure you want to delete # {0}?', $gun->ID_GUN)]) ?> </li>
         <li><?= $this->Html->link(__('List Gun'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Gun'), ['action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('Search'), ['action' => 'search']) ?></li>
     </ul>
 </nav>
 <div class="gun view large-9 medium-8 columns content">
