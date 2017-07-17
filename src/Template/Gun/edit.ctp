@@ -22,12 +22,15 @@
         <legend><?= __('Edit Gun') ?></legend>
         <?php
             echo $this->Form->control('SERIAL');
-            echo $this->Form->control('MFG');
+            echo $this->Form->label('MFG','MANUFACTURER');
+            echo $this->Form->select('MFG',$mfgs);
             echo $this->Form->control('IMPORTER');
             echo $this->Form->control('MODEL');
-            echo $this->Form->control('CALIBER');
+            echo $this->Form->label('CALIBER','CALIBER');
+            echo $this->Form->select('CALIBER',$caliber);
             echo $this->Form->control('ACTION');
-            echo $this->Form->control('TYPE');
+            echo $this->Form->label('TYPE','FIREARMTYPE');
+            echo $this->Form->select('TYPE',$type_firearm);
             echo $this->Form->control('ANT');
             echo $this->Form->control('CR');
             echo $this->Form->control('STDCAP');

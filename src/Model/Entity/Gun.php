@@ -66,6 +66,8 @@ use Cake\ORM\Entity;
  * @property string $EMAIL_DISP
  * @property string $TEL_DISP
  * @property string $WEB_DISP
+ * @property \Cake\I18n\Date $BEGIN_DATE
+ * @property \Cake\I18n\Date $END_DATE
  */
 class Gun extends Entity
 {
