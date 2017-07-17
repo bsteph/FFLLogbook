@@ -30,7 +30,7 @@ class GunTable extends Table
     {
         parent::initialize($config);
         // Add the behaviour to your table
-        $this->addBehavior('Search.Search');
+        /*$this->addBehavior('Search.Search');
 
         // Setup search filter using search manager
         $this->searchManager()
@@ -51,7 +51,7 @@ class GunTable extends Table
                 'callback' => function ($query, $args, $filter) {
                     // Modify $query as required
                 }
-            ]);
+            ]);*/
 
 
 

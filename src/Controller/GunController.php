@@ -10,9 +10,12 @@ use App\Controller\AppController;
  *
  * @method \App\Model\Entity\Gun[] paginate($object = null, array $settings = [])
  */
+
+
 class GunController extends AppController
 {
-
+    var $begin_date = '1/1/1960';
+    var $end_date = '12/31/2040';
     /**
      * Index method
      *
@@ -27,13 +30,15 @@ class GunController extends AppController
              //   $this->Flash->success(__('The gun has been saved.'));
             //if($this->request->)
             //$co_acq = $this->request->
-            $this->request->session()->write(['CO_ACQ','CO_ACQ']);
+            $this->request->session()->write(['CO_ACQ','CO_ACQ','BEGIN_DATE','END_DATE']);
           //  $this->request->session()->write('SERIAL','SERIAL');
             //$postvars=$this->request->data['SERIAL']['SERIAL'];
             $serial=$this->request->getData('SERIAL');
             $coacq=$this->request->getData('CO_ACQ');
+            $begin_date=$this->request->getData('BEGIN_DATE');
+            $end_date=$this->request->getData('END_DATE');
 
-            return $this->redirect(['action' => 'index','?'=>['CO_ACQ'=>$coacq,'SERIAL'=>$serial]]);
+            return $this->redirect(['action' => 'index','?'=>['CO_ACQ'=>$coacq,'SERIAL'=>$serial,'BEGIN_DATE'=>$begin_date,'END_DATE'=>$end_date]]);
   //          }
     //        $this->Flash->error(__('The gun could not be saved. Please, try again.'));
         }
@@ -45,6 +50,15 @@ class GunController extends AppController
     {
         $serial=$this->request->getData('SERIAL');
         $coacq=$this->request->getData('CO_ACQ');
+        $begin_date_array=$this->request->getData( 'BEGIN_DATE');
+        $end_date_array=$this->request->getData('END_DATE');
+        if (!empty($begin_date_array)){
+            $begin_date = implode("-",$begin_date_array);
+        }
+        if (!empty($end_date_array)){
+            $end_date = implode("-",$end_date_array);
+        }
+
         if (empty($serial) and !empty($coacq)) {
             $query = $this->Gun->find('all')
                 ->where(['CO_ACQ LIKE' => '%' . $coacq . '%']);
@@ -55,8 +69,17 @@ class GunController extends AppController
         } elseif (!empty($coacq) and !empty($serial)) {
             $query = $this->Gun->find('all')
                 ->where(['SERIAL LIKE' => '%' . $serial . '%'])
-                ->orWhere(['CO_ACQ LIKE' => '%' . $coacq . '%']);;
-        } else {
+                ->orWhere(['CO_ACQ LIKE' => '%' . $coacq . '%']);
+        } elseif (!empty($begin_date)) {
+            if (empty($end_date)) {
+                $end_date= date("Y-m-d");
+            }
+            $query = $this->Gun->find('all')
+                ->where(['DATE_ACQ >='=> $begin_date])
+                ->andWhere(['DATE_ACQ <=' => $end_date]);
+
+        }
+        else {
             $query = $this->Gun->find('all');
         }
 
@@ -80,7 +103,19 @@ class GunController extends AppController
         $gun = $this->Gun->get($id, [
             'contain' => []
         ]);
-
+        $this->loadModel("Fields");
+        $mfg = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'GUN_MFG_F'])->toArray();
+        $this->set('mfgs',$mfg);
+        $caliber = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'CALIBER_F'])->toArray();
+        $this->set('caliber',$caliber);
+        $type_firearm = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'TYPE_FIREARM_F'])->toArray();
+        $this->set('type_firearm',$type_firearm);
         $this->set('gun', $gun);
         $this->set('_serialize', ['gun']);
     }
@@ -131,6 +166,19 @@ class GunController extends AppController
         $gun = $this->Gun->get($id, [
             'contain' => []
         ]);
+        $this->loadModel("Fields");
+        $mfg = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'GUN_MFG_F'])->toArray();
+        $this->set('mfgs',$mfg);
+        $caliber = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'CALIBER_F'])->toArray();
+        $this->set('caliber',$caliber);
+        $type_firearm = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'TYPE_FIREARM_F'])->toArray();
+        $this->set('type_firearm',$type_firearm);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $gun = $this->Gun->patchEntity($gun, $this->request->getData());
             if ($this->Gun->save($gun)) {

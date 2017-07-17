@@ -24,10 +24,10 @@
             echo $this->Form->select('CALIBER',$caliber);
             //echo $this->Form->control('CALIBER');
             echo $this->Form->control('ACTION');
-            echo $this->Form->label('TYPE','FIREARMTYPE');
+            echo $this->Form->label('TYPE','FIREARM TYPE');
             echo $this->Form->select('TYPE',$type_firearm);
             //echo $this->Form->control('TYPE');
-            echo $this->Form->control('STDCAP');
+            echo $this->Form->control('STDCAP','Standard Capacity');
             echo $this->Form->control('MATERIAL');
             echo $this->Form->control('FINISH');
             echo $this->Form->control('COLOR');
