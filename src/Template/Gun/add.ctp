@@ -31,7 +31,18 @@
             echo $this->Form->control('MATERIAL');
             echo $this->Form->control('FINISH');
             echo $this->Form->control('COLOR');
-            echo $this->Form->control('DATE_ACQ', ['empty' => true]);
+            echo $this->Form->control('DATE_ACQ', array(
+                'label' => 'Date Acquired',
+                'selected' => array(
+                    'day' => '',
+                    'month' => '',
+                    'year' => '',
+                    'hour' => '',
+                    'minute' => '',
+                    'second' => ''
+                )
+            ));
+           // echo $this->Form->control('DATE_ACQ', ['empty' => true]);
             echo $this->Form->control('PRICE_ACQ');
             echo $this->Form->control('FNAME_ACQ');
             echo $this->Form->control('LNAME_ACQ');

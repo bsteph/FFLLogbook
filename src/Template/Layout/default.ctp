@@ -40,8 +40,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <section class="top-bar-section">
             <ul class="left">
             <li><?php echo $this->Html->link("Gun",array('controller'=>'Gun','action'=>'index'));?></li>
-            <li><?php echo $this->Html->link("Fields",array('controller'=>'Fields','action'=>'index','full_base'=>true));?></li>
-            <li><?php echo $this->Html->link("Log",array('controller'=>'GunLog','action'=>'index','full_base'=>true));?></li>
+            <li><?php echo $this->Html->link("Fields",array('controller'=>'Fields','action'=>'index'));?></li>
+            <li><?php echo $this->Html->link("Log",array('controller'=>'GunLog','action'=>'index'));?></li>
         </ul>
         </section>
         <section class="top-bar-section">

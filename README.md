@@ -8,7 +8,7 @@ Installation:
 2) create a mysql database called public
 3) import the gun.sql script
 4) run bin/cake server
-5) go to the url lised (http://localhost:8765/Gun
+5) go to the url lised (http://localhost:8765
 
 # CakePHP Application Skeleton
 
