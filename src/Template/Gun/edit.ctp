@@ -25,63 +25,68 @@
             echo $this->Form->label('MFG','MANUFACTURER');
             echo $this->Form->select('MFG',$mfgs);
             echo $this->Form->control('IMPORTER');
-            echo $this->Form->control('MODEL');
             echo $this->Form->label('CALIBER','CALIBER');
             echo $this->Form->select('CALIBER',$caliber);
             echo $this->Form->control('ACTION');
-            echo $this->Form->label('TYPE','FIREARMTYPE');
+            echo $this->Form->label('TYPE','FIREARM TYPE');
             echo $this->Form->select('TYPE',$type_firearm);
-            echo $this->Form->control('ANT');
-            echo $this->Form->control('CR');
-            echo $this->Form->control('STDCAP');
+            echo $this->Form->control('STDCAP',["label"=>"Standard Capacity"]);
             echo $this->Form->control('MATERIAL');
             echo $this->Form->control('FINISH');
             echo $this->Form->control('COLOR');
-            echo $this->Form->control('DATE_ACQ', ['empty' => true]);
-            echo $this->Form->control('PRICE_ACQ');
-            echo $this->Form->control('FNAME_ACQ');
-            echo $this->Form->control('LNAME_ACQ');
-            echo $this->Form->control('CO_ACQ');
-            echo $this->Form->control('LIC_ACQ');
-            echo $this->Form->control('ADDR1_ACQ');
-            echo $this->Form->control('ADDR2_ACQ');
-            echo $this->Form->control('CITY_ACQ');
-            echo $this->Form->control('STATE_ACQ');
-            echo $this->Form->control('ZIP_ACQ');
-            echo $this->Form->control('TEL_ACQ');
-            echo $this->Form->control('FAX_ACQ');
-            echo $this->Form->control('EMAIL_ACQ');
-            echo $this->Form->control('WEB_ACQ');
-            echo $this->Form->control('DATE_DISP', ['empty' => true]);
-            echo $this->Form->control('PRICE_DISP');
-            echo $this->Form->control('FNAME_DISP');
-            echo $this->Form->control('LNAME_DISP');
-            echo $this->Form->control('LIC_DISP');
-            echo $this->Form->control('DOB_DISP', ['empty' => true]);
-            echo $this->Form->control('CO_DISP');
-            echo $this->Form->control('ADDR1_DISP');
-            echo $this->Form->control('ADDR2_DISP');
-            echo $this->Form->control('CITY_DISP');
-            echo $this->Form->control('STATE_DISP');
-            echo $this->Form->control('ZIP_DISP');
-            echo $this->Form->control('ID_TYPE_DISP');
-            echo $this->Form->control('ID_AUTH_DISP');
-            echo $this->Form->control('ID_NUM_DISP');
-            echo $this->Form->control('ALIEN_DOC');
-            echo $this->Form->control('ROUND_COUNT');
-            echo $this->Form->control('NOTES');
-            echo $this->Form->control('EDIT_REASON');
-            echo $this->Form->control('PERSONAL');
+            echo $this->Form->control('DATE_ACQ', array(
+                'label' => 'Date Acquired',
+                'selected' => array(
+                    'day' => '',
+                    'month' => '',
+                    'year' => '',
+                    'hour' => '',
+                    'minute' => '',
+                    'second' => ''
+                )
+            ));
+            echo $this->Form->control('PRICE_ACQ',['label'=>'Purchase Price']);
+            echo $this->Form->control('FNAME_ACQ',['label'=>'Acquired First Name']);
+            echo $this->Form->control('LNAME_ACQ',['label'=>'Acquired Last Name']);
+            echo $this->Form->control('CO_ACQ',['label'=>'Acquired Company']);
+            echo $this->Form->control('LIC_ACQ',['label'=>'Acquired License Number']);
+            echo $this->Form->control('ADDR1_ACQ',['label'=>'Acquired Address 1']);
+            echo $this->Form->control('ADDR2_ACQ',['label'=>'Acquired Address 2']);
+            echo $this->Form->control('CITY_ACQ',['label'=>'Acquired City']);
+            echo $this->Form->control('STATE_ACQ',['label'=>'Acquired State']);
+            echo $this->Form->control('ZIP_ACQ',['label'=>'Acquired Zipcode']);
+            echo $this->Form->control('TEL_ACQ',['label'=>'Acquired Telephone']);
+            echo $this->Form->control('EMAIL_ACQ',['label'=>'Acquired Email']);
+            echo $this->Form->control('WEB_ACQ',['label'=>'Acquired Web URL']);
+            echo $this->Form->control('NOTES',['label'=>'Notes']);
+            echo $this->Form->control('PERSONAL',['label'=>'Personal ']);
             echo $this->Form->control('NFA');
+            echo $this->Form->control('CR_ELIGIBLE',['label'=>'Curio & Relic Eligible']);
+            echo $this->Form->control('ANT',['label'=>'Antique']);
+            echo $this->Form->control('CR',['label'=>'Curio & Relic']);
+            echo $this->Form->control('DATE_DISP', array(
+                'label' => 'Date Disposed',
+                'selected' => array(
+                    'day' => '',
+                    'month' => '',
+                    'year' => '',
+                    'hour' => '',
+                    'minute' => '',
+                    'second' => ''
+                )
+            ));
+            echo $this->Form->control('PRICE_DISP',['label'=>'Disposed Price']);
+            echo $this->Form->control('FNAME_DISP',['label'=>'Disposed First Name']);
+            echo $this->Form->control('LNAME_DISP',['label'=>'Disposed Last Name']);
+            echo $this->Form->control('LIC_DISP',['label'=>'Disposed License Number']);
+            echo $this->Form->control('CO_DISP',['label'=>'Disposed Company']);
+            echo $this->Form->control('ADDR1_DISP',['label'=>'Disposed Address 1']);
+            echo $this->Form->control('ADDR2_DISP',['label'=>'Disposed Address 2']);
+            echo $this->Form->control('CITY_DISP',['label'=>'Disposed City']);
+            echo $this->Form->control('STATE_DISP',['label'=>'Disposed State']);
+            echo $this->Form->control('ZIP_DISP',['label'=>'Disposed Zip Code']);
+            echo $this->Form->control('EDIT_REASON');
             echo $this->Form->control('STATUS');
-            echo $this->Form->control('NICS_STATUS');
-            echo $this->Form->control('NICS_TIMEAT');
-            echo $this->Form->control('NICS_EXPIRE');
-            echo $this->Form->control('NICS_NUMBER');
-            echo $this->Form->control('CR_ELIGIBLE');
-            echo $this->Form->control('EMAIL_DISP');
-            echo $this->Form->control('TEL_DISP');
-            echo $this->Form->control('WEB_DISP');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
