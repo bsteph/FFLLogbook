@@ -27,7 +27,7 @@
             echo $this->Form->label('TYPE','FIREARM TYPE');
             echo $this->Form->select('TYPE',$type_firearm);
             //echo $this->Form->control('TYPE');
-            echo $this->Form->control('STDCAP','Standard Capacity');
+            echo $this->Form->control('STDCAP',["label"=>"Standard Capacity"]);
             echo $this->Form->control('MATERIAL');
             echo $this->Form->control('FINISH');
             echo $this->Form->control('COLOR');
@@ -43,25 +43,25 @@
                 )
             ));
            // echo $this->Form->control('DATE_ACQ', ['empty' => true]);
-            echo $this->Form->control('PRICE_ACQ');
-            echo $this->Form->control('FNAME_ACQ');
-            echo $this->Form->control('LNAME_ACQ');
-            echo $this->Form->control('CO_ACQ');
-            echo $this->Form->control('LIC_ACQ');
-            echo $this->Form->control('ADDR1_ACQ');
-            echo $this->Form->control('ADDR2_ACQ');
-            echo $this->Form->control('CITY_ACQ');
-            echo $this->Form->control('STATE_ACQ');
-            echo $this->Form->control('ZIP_ACQ');
-            echo $this->Form->control('TEL_ACQ');
-            echo $this->Form->control('EMAIL_ACQ');
-            echo $this->Form->control('WEB_ACQ');
-            echo $this->Form->control('NOTES');
-            echo $this->Form->control('PERSONAL');
+            echo $this->Form->control('PRICE_ACQ',['label'=>'Purchase Price']);
+            echo $this->Form->control('FNAME_ACQ',['label'=>'Acquired First Name']);
+            echo $this->Form->control('LNAME_ACQ',['label'=>'Acquired Last Name']);
+            echo $this->Form->control('CO_ACQ',['label'=>'Acquired Company']);
+            echo $this->Form->control('LIC_ACQ',['label'=>'Acquired License Number']);
+            echo $this->Form->control('ADDR1_ACQ',['label'=>'Acquired Address 1']);
+            echo $this->Form->control('ADDR2_ACQ',['label'=>'Acquired Address 2']);
+            echo $this->Form->control('CITY_ACQ',['label'=>'Acquired City']);
+            echo $this->Form->control('STATE_ACQ',['label'=>'Acquired State']);
+            echo $this->Form->control('ZIP_ACQ',['label'=>'Acquired Zipcode']);
+            echo $this->Form->control('TEL_ACQ',['label'=>'Acquired Telephone']);
+            echo $this->Form->control('EMAIL_ACQ',['label'=>'Acquired Email']);
+            echo $this->Form->control('WEB_ACQ',['label'=>'Acquired Web URL']);
+            echo $this->Form->control('NOTES',['label'=>'Notes']);
+            echo $this->Form->control('PERSONAL',['label'=>'Personal ']);
             echo $this->Form->control('NFA');
-            echo $this->Form->control('CR_ELIGIBLE');
-            echo $this->Form->control('ANT');
-            echo $this->Form->control('CR');
+            echo $this->Form->control('CR_ELIGIBLE',['label'=>'Curio & Relic Eligible']);
+            echo $this->Form->control('ANT',['label'=>'Antique']);
+            echo $this->Form->control('CR',['label'=>'Curio & Relic']);
 
         ?>
     </fieldset>
