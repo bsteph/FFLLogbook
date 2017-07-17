@@ -48,7 +48,7 @@ class GunLogController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add()
+   /* public function add()
     {
         $gunLog = $this->GunLog->newEntity();
         if ($this->request->is('post')) {
@@ -71,7 +71,7 @@ class GunLogController extends AppController
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function edit($id = null)
+    /*public function edit($id = null)
     {
         $gunLog = $this->GunLog->get($id, [
             'contain' => []
@@ -87,7 +87,7 @@ class GunLogController extends AppController
         }
         $this->set(compact('gunLog'));
         $this->set('_serialize', ['gunLog']);
-    }
+    }*/
 
     /**
      * Delete method
@@ -96,7 +96,7 @@ class GunLogController extends AppController
      * @return \Cake\Http\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($id = null)
+   /* public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
         $gunLog = $this->GunLog->get($id);
@@ -107,5 +107,5 @@ class GunLogController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
-    }
+    }*/
 }

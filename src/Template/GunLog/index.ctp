@@ -7,7 +7,7 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Gun Log'), ['action' => 'add']) ?></li>
+
     </ul>
 </nav>
 <div class="gunLog index large-9 medium-8 columns content">
@@ -39,8 +39,7 @@
                 <td><?= h($gunLog->TIME_LOG) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $gunLog->ID_LOG]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $gunLog->ID_LOG]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $gunLog->ID_LOG], ['confirm' => __('Are you sure you want to delete # {0}?', $gunLog->ID_LOG)]) ?>
+
                 </td>
             </tr>
             <?php endforeach; ?>
