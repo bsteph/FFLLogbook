@@ -20,7 +20,17 @@ class GunLogController extends AppController
      */
     public function index()
     {
-        $gunLog = $this->paginate($this->GunLog);
+
+
+        $idgun=$this->request->getData('ID_GUN');
+        if (!empty($idgun)) {
+            $query = $this->GunLog->find('all')
+                ->where(['ID_GUN ='=> $idgun]);
+            $this->set('gunLog', $this->paginate($query));
+        }
+        else {
+            $gunLog = $this->paginate($this->GunLog);
+        }
 
         $this->set(compact('gunLog'));
         $this->set('_serialize', ['gunLog']);
@@ -48,7 +58,7 @@ class GunLogController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add()
+   /* public function add()
     {
         $gunLog = $this->GunLog->newEntity();
         if ($this->request->is('post')) {
@@ -71,7 +81,7 @@ class GunLogController extends AppController
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function edit($id = null)
+    /*public function edit($id = null)
     {
         $gunLog = $this->GunLog->get($id, [
             'contain' => []
@@ -87,7 +97,7 @@ class GunLogController extends AppController
         }
         $this->set(compact('gunLog'));
         $this->set('_serialize', ['gunLog']);
-    }
+    }*/
 
     /**
      * Delete method
@@ -96,7 +106,7 @@ class GunLogController extends AppController
      * @return \Cake\Http\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($id = null)
+   /* public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
         $gunLog = $this->GunLog->get($id);
@@ -107,5 +117,5 @@ class GunLogController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
-    }
+    }*/
 }

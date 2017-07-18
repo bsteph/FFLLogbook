@@ -29,7 +29,7 @@ class FieldsTable extends Table
     public function initialize(array $config)
     {
         parent::initialize($config);
-
+        $this->belongsTo('Gun');
         $this->setTable('fields');
         $this->setDisplayField('ID_F');
         $this->setPrimaryKey('ID_F');

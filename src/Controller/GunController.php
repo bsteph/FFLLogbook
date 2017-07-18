@@ -48,6 +48,21 @@ class GunController extends AppController
     }
     public function index()
     {
+        $this->loadModel("Fields");
+        //$mfg = $this->Fields->find('all')->contain(['MFG']);
+        $mfg = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'GUN_MFG_F'])->toArray();
+        $this->set('mfg',$mfg);
+        $caliber = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'CALIBER_F'])->toArray();
+        $this->set('caliber',$caliber);
+        $type_firearm = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'TYPE_FIREARM_F'])->toArray();
+        $this->set('type_firearm',$type_firearm);
+
         $serial=$this->request->getData('SERIAL');
         $coacq=$this->request->getData('CO_ACQ');
         $begin_date_array=$this->request->getData( 'BEGIN_DATE');
