@@ -38,9 +38,9 @@
             <tr>
                 <td><?= $this->Number->format($gun->ID_GUN) ?></td>
                 <td><?= h($gun->SERIAL) ?></td>
-                <td><?= h($gun->MFG) ?></td>
+                <td><?= h($mfg[$gun->MFG]) ?></td>
                 <td><?= h($gun->MODEL) ?></td>
-                <td><?= h($gun->CALIBER) ?></td>
+                <td><?= h($caliber[$gun->CALIBER]) ?></td>
 
                 <td><?= h($gun->DATE_ACQ) ?></td>
                 <td><?= h($gun->FNAME_ACQ) ?></td>

@@ -20,7 +20,17 @@ class GunLogController extends AppController
      */
     public function index()
     {
-        $gunLog = $this->paginate($this->GunLog);
+
+
+        $idgun=$this->request->getData('ID_GUN');
+        if (!empty($idgun)) {
+            $query = $this->GunLog->find('all')
+                ->where(['ID_GUN ='=> $idgun]);
+            $this->set('gunLog', $this->paginate($query));
+        }
+        else {
+            $gunLog = $this->paginate($this->GunLog);
+        }
 
         $this->set(compact('gunLog'));
         $this->set('_serialize', ['gunLog']);
