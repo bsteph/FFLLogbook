@@ -22,6 +22,11 @@ class GunController extends AppController
      * @return \Cake\Http\Response|void
      */
 
+    public function initialize()
+    {
+        parent::initialize();
+        $this->loadComponent('RequestHandler');
+    }
     public function search()
     {
         if ($this->request->is('post')) {
@@ -48,6 +53,11 @@ class GunController extends AppController
     }
     public function index()
     {
+        $this->pdfConfig = array(
+            'download' => 'true',
+            'filename' => 'gun.pdf'
+        );
+
         $this->loadModel("Fields");
         //$mfg = $this->Fields->find('all')->contain(['MFG']);
         $mfg = $this->Fields->find("list", [
@@ -102,6 +112,7 @@ class GunController extends AppController
 
    //     $gun = $this->paginate($this->Gun);
 
+
         $this->set(compact('gun'));
         $this->set('_serialize', ['gun']);
     }
@@ -113,6 +124,72 @@ class GunController extends AppController
      * @return \Cake\Http\Response|void
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
+    public function pdfview($id=null) {
+
+        $this->pdfConfig = array(
+            'download' => 'true',
+            'filename' => 'gun.pdf'
+        );
+
+        $this->loadModel("Fields");
+        //$mfg = $this->Fields->find('all')->contain(['MFG']);
+        $mfg = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'GUN_MFG_F'])->toArray();
+        $this->set('mfg',$mfg);
+        $caliber = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'CALIBER_F'])->toArray();
+        $this->set('caliber',$caliber);
+        $type_firearm = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'TYPE_FIREARM_F'])->toArray();
+        $this->set('type_firearm',$type_firearm);
+
+        $serial=$this->request->getData('SERIAL');
+        $coacq=$this->request->getData('CO_ACQ');
+        $begin_date_array=$this->request->getData( 'BEGIN_DATE');
+        $end_date_array=$this->request->getData('END_DATE');
+        if (!empty($begin_date_array)){
+            $begin_date = implode("-",$begin_date_array);
+        }
+        if (!empty($end_date_array)){
+            $end_date = implode("-",$end_date_array);
+        }
+
+        if (empty($serial) and !empty($coacq)) {
+            $query = $this->Gun->find('all')
+                ->where(['CO_ACQ LIKE' => '%' . $coacq . '%']);
+
+        } elseif (empty($coacq) and !empty($serial)){
+            $query = $this->Gun->find('all')
+                ->where(['SERIAL LIKE' => '%' . $serial . '%']);
+        } elseif (!empty($coacq) and !empty($serial)) {
+            $query = $this->Gun->find('all')
+                ->where(['SERIAL LIKE' => '%' . $serial . '%'])
+                ->orWhere(['CO_ACQ LIKE' => '%' . $coacq . '%']);
+        } elseif (!empty($begin_date)) {
+            if (empty($end_date)) {
+                $end_date= date("Y-m-d");
+            }
+            $query = $this->Gun->find('all')
+                ->where(['DATE_ACQ >='=> $begin_date])
+                ->andWhere(['DATE_ACQ <=' => $end_date]);
+
+        }
+        else {
+            $query = $this->Gun->find('all');
+        }
+
+        $this->set('gun', $this->paginate($query));
+
+        //     $gun = $this->paginate($this->Gun);
+
+
+        $this->set(compact('gun'));
+        $this->set('_serialize', ['gun']);
+    }
+
     public function view($id = null)
     {
         $gun = $this->Gun->get($id, [
@@ -131,6 +208,12 @@ class GunController extends AppController
             "keyField"=>"id",
             "valueField"=>'TYPE_FIREARM_F'])->toArray();
         $this->set('type_firearm',$type_firearm);
+
+        $this->pdfConfig = array(
+            'download' => 'true',
+            'filename' => 'gun.pdf'
+        );
+
         $this->set('gun', $gun);
         $this->set('_serialize', ['gun']);
     }
