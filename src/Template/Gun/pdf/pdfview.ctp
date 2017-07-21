@@ -24,6 +24,7 @@
                 <th scope="col">'DATE_DISP'</th>
                 <th scope="col">'FNAME_DISP'</th>
                 <th scope="col">'LNAME_DISP' </th>
+                <th scope="col">'4473 NUMBER' </th>
 
             </tr>
         </thead>
@@ -43,7 +44,7 @@
                 <td><?= h($gun->DATE_DISP) ?></td>
                 <td><?= h($gun->FNAME_DISP) ?></td>
                 <td><?= h($gun->LNAME_DISP) ?></td>
-
+                <td><?= h($gun->F4473_DISP) ?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>

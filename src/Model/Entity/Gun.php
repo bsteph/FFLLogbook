@@ -50,7 +50,8 @@ use Cake\ORM\Entity;
  * @property string $ID_TYPE_DISP
  * @property string $ID_AUTH_DISP
  * @property string $ID_NUM_DISP
- * @property string|resource $F4473_DISP
+ * @property int $F4473_DISP
+ * @property string|resource $F4473
  * @property string $ALIEN_DOC
  * @property int $ROUND_COUNT
  * @property string $NOTES
