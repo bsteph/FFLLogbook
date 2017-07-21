@@ -40,6 +40,8 @@ use Cake\Routing\Router;
  *
  */
 Router::defaultRouteClass('DashedRoute');
+Router::extensions(['pdf']);
+Router::mapResources(['pdf']);
 
 Router::scope('/', function ($routes) {
     /**
@@ -78,3 +80,5 @@ Router::scope('/', function ($routes) {
  * how to customize the loading of plugin routes.
  */
 Plugin::routes();
+
+//$routes->extensions(['pdf']);

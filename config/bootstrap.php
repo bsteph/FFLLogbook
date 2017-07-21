@@ -69,6 +69,8 @@ try {
     die($e->getMessage() . "\n");
 }
 
+
+
 // Load an environment local configuration file.
 // You can use a file like app_local.php to provide local overrides to your
 // shared configuration.
@@ -204,6 +206,24 @@ Type::build('datetime')->useLocaleParser();
 
 Plugin::load('DebugKit');
 
-
-
 Plugin::load('Search');
+
+Plugin::load('CakePdf', array('bootstrap' => true, 'routes' => true));
+
+Configure::write('CakePdf', [
+    'engine' => [
+        'className' => 'CakePdf.WkHtmlToPdf',
+        // Mac OS X / Linux is usually like:
+        'binary' => '/usr/local/bin/wkhtmltopdf',
+        // On Windows environmnent you NEED to use the path like
+        // old fashioned MS-DOS Paths, otherwise you will keep getting:
+        // WKHTMLTOPDF didn't return any data
+        // 'binary' => 'C:\\Progra~1\\wkhtmltopdf\\bin\\wkhtmltopdf.exe',
+        'options' => [
+            'print-media-type' => false,
+            'outline' => true,
+            'dpi' => 96,
+            'orientation' =>'landscape'
+        ],
+    ],
+]);
