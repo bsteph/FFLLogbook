@@ -10,6 +10,23 @@
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Gun'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('Search'), ['action' => 'search']) ?></li>
+        <li><?= $this->Html->link(
+                'Save as PDF',
+                [
+                    'action' => 'index',
+                    '_ext' => 'pdf'
+                ] + $this->request->query, // there it goes
+                [
+                    'class' => 'create-pdf-link',
+                    'target' => 'blank'
+                ]
+            ); ?></li>
+        <li><?= $this->Html->link('Save As CSV', array(
+                'controller' => 'Gun',
+                'action' => 'export',
+                'ext' => 'csv'
+            )); ?></li>
+
     </ul>
 </nav>
 <div class="gun index large-9 medium-12 columns content  ">
@@ -52,6 +69,7 @@
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $gun->ID_GUN]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $gun->ID_GUN]) ?>
+                    <?= $this->Html->link(__('PDF'), ['action' => 'pdf', $gun->ID_GUN]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $gun->ID_GUN], ['confirm' => __('Are you sure you want to delete # {0}?', $gun->ID_GUN)]) ?>
                 </td>
             </tr>

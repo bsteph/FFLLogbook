@@ -216,6 +216,8 @@ class GunTable extends Table
 
         $validator
             ->allowEmpty('F4473_DISP');
+        $validator
+            ->allowEmpty('F4473');
 
         $validator
             ->allowEmpty('ALIEN_DOC');

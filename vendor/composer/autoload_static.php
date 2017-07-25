@@ -66,6 +66,7 @@ class ComposerStaticInitfbe6f8227902dd0b70ac12b66b4ec591
         ),
         'C' => 
         array (
+            'CsvView\\' => 8,
             'Crud\\' => 5,
             'Composer\\Spdx\\' => 14,
             'Composer\\Semver\\' => 16,
@@ -75,6 +76,7 @@ class ComposerStaticInitfbe6f8227902dd0b70ac12b66b4ec591
             'Cake\\Composer\\' => 14,
             'Cake\\Chronos\\' => 13,
             'Cake\\' => 5,
+            'CakePdf\\' => 8,
         ),
         'B' => 
         array (
@@ -190,6 +192,10 @@ class ComposerStaticInitfbe6f8227902dd0b70ac12b66b4ec591
         array (
             0 => __DIR__ . '/..' . '/cakephp/debug_kit/src',
         ),
+        'CsvView\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/friendsofcake/cakephp-csvview/src',
+        ),
         'Crud\\' => 
         array (
             0 => __DIR__ . '/..' . '/friendsofcake/crud/src',
@@ -225,6 +231,10 @@ class ComposerStaticInitfbe6f8227902dd0b70ac12b66b4ec591
         'Cake\\' => 
         array (
             0 => __DIR__ . '/..' . '/cakephp/cakephp/src',
+        ),
+        'CakePdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/friendsofcake/cakepdf/src',
         ),
         'Bake\\' => 
         array (

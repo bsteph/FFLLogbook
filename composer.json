@@ -11,7 +11,9 @@
         "cakephp/migrations": "~1.0",
         "cakephp/plugin-installer": "*",
         "friendsofcake/crud": "~4.2",
-        "friendsofcake/search": "^1.2"
+        "friendsofcake/search": "^1.2",
+        "friendsofcake/cakepdf": "^3.2",
+        "friendsofcake/cakephp-csvview": "^3.2"
     },
     "require-dev": {
         "psy/psysh": "@stable",
