@@ -205,7 +205,7 @@ Type::build('date')->useLocaleParser();
 Type::build('datetime')->useLocaleParser();
 
 Plugin::load('DebugKit');
-
+Plugin::load('CsvView');
 Plugin::load('Search');
 
 Plugin::load('CakePdf', array('bootstrap' => true, 'routes' => true));

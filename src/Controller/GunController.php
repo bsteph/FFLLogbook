@@ -51,6 +51,62 @@ class GunController extends AppController
         $this->set('_serialize', ['gun']);
 
     }
+
+
+    public function export()
+    {
+
+
+
+        //return;
+        $gun = $this->Gun->find('all');
+
+        $fields=$this->loadModel("Fields");
+
+
+        //$mfg = $this->Fields->find('all')->contain(['MFG']);
+
+        $caliber = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'CALIBER_F'])->toArray();
+        $this->set('caliber',$caliber);
+        $type_firearm = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'TYPE_FIREARM_F'])->toArray();
+        $this->set('type_firearm',$type_firearm);
+
+        $this->set(compact('gun'));
+        //$_header = array('Gun ID','Serial','Manufacurer','Importer','Model','Caliber', 'Action', 'Type', 'Antique','Curio&Relic','Standard Capacity','Material','Finish',
+        // 'Color', 'Date Acquired', 'Price Acquired', 'First Name Acquired', 'Last Name Acquired', 'Company Acquired', 'License Acquired', 'Address 1 Acquired', 'Address 2 Acquired',
+        //    'City Acquired', 'State Acquired', 'Zip Acquired', 'Telephone Acquired', 'Fax Acquired', 'Email Acquired', 'Web Acquired', 'Date Disposed', 'Price Disposed', 'First Name Disposed', 'Last Name Disposed', 'License Disposed', 'DOB Disposed',
+        //    'Company Disposed', 'Address 1 Disposed', 'Address 2 Disposed', 'State Disposed', 'ZIP Code Disposed','ID Type Disposed','ID Auth Disposed', 'ID Number Disposed', '4473', '4473 Number', 'Alien Documentation', 'Round Count',
+        //    'Notes', 'Edit Reason', 'Personal', 'NFA', 'Status', 'NICS Status', 'NICS Time AT', 'NICS Expire', 'NICS Number', 'Curio & Relic Eligible', 'Email Disposed','Telephone Disposed','Web Disposed');
+        $_header= array('Serial Number','Manufacturer', 'Importer','Model','Caliber','Type','Date Acquired','First Name Acquired', 'Last Name Acquired',
+            'Company Acquired', 'License Acquired', 'Address 1 Acquired', 'Address 2 Acquired','Date Disposed',  'First Name Disposed',
+            'Last Name Disposed','Company Disposed','4473 Number');
+        $header="Serial Number,Manufacturer, Importer,Model,Caliber,Type,Date Acquired,First Name Acquired, Last Name Acquired,Company Acquired, License Acquired, Address 1 Acquired, Address 2 Acquired,Date Disposed,  First Name Disposed,Last Name Disposed,Company Disposed,4473 Number";
+        $_extract = array('SERIAL','MFG',
+        'IMPORTER','MODEL','CALIBER', 'TYPE','DATE_ACQ','FNAME_ACQ','LNAME_ACQ','CO_ACQ','LIC_ACQ','ADDR1_ACQ','ADDR2_ACQ',
+            'DATE_DISP','FNAME_DISP','LNAME_DISP', 'CO_DISP','F4473_DISP');
+        $_serialize='gun';
+
+        $mfg = $this->Fields->find("list", [
+            "keyField"=>"id",
+            "valueField"=>'GUN_MFG_F'])->toArray();
+        $this->set('mfg',$mfg);
+
+        //$this->viewBuilder()->className('CsvView.Csv');
+        $this->set(compact( '_header', '_extract'));
+        //$this->set(compact('_serialize', '_header', '_extract'));
+        $this->set('gun', $gun);
+        $this->set('header',$header);
+        //$this->set('_serialize', ['gun']);
+        $this->response->download("export.csv");
+        $this->viewBuilder()->setLayout('ajax');
+
+
+    }
+
     public function index()
     {
         $this->pdfConfig = array(
@@ -199,7 +255,7 @@ class GunController extends AppController
         $mfg = $this->Fields->find("list", [
             "keyField"=>"id",
             "valueField"=>'GUN_MFG_F'])->toArray();
-        $this->set('mfgs',$mfg);
+        $this->set('mfg',$mfg);
         $caliber = $this->Fields->find("list", [
             "keyField"=>"id",
             "valueField"=>'CALIBER_F'])->toArray();

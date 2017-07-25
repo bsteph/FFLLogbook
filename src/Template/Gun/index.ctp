@@ -21,6 +21,11 @@
                     'target' => 'blank'
                 ]
             ); ?></li>
+        <li><?= $this->Html->link('Save As CSV', array(
+                'controller' => 'Gun',
+                'action' => 'export',
+                'ext' => 'csv'
+            )); ?></li>
 
     </ul>
 </nav>

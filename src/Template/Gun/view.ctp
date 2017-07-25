@@ -24,7 +24,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('MFG') ?></th>
-            <td><?= h($gun->MFG) ?></td>
+            <td><?= h($mfg[$gun->MFG]) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('IMPORTER') ?></th>
@@ -36,7 +36,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('CALIBER') ?></th>
-            <td><?= h($gun->CALIBER) ?></td>
+            <td><?= h($caliber[$gun->CALIBER]) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('ACTION') ?></th>
@@ -44,7 +44,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('TYPE') ?></th>
-            <td><?= h($gun->TYPE) ?></td>
+            <td><?= h($type_firearm[$gun->TYPE]) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('MATERIAL') ?></th>

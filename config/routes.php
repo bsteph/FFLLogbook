@@ -40,8 +40,10 @@ use Cake\Routing\Router;
  *
  */
 Router::defaultRouteClass('DashedRoute');
-Router::extensions(['pdf']);
-Router::mapResources(['pdf']);
+Router::extensions(['pdf','csv']);
+//Router::extensions(['csv']);
+
+//Router::mapResources(['pdf']);
 
 Router::scope('/', function ($routes) {
     /**
