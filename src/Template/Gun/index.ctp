@@ -13,7 +13,7 @@
         <li><?= $this->Html->link(
                 'Save as PDF',
                 [
-                    'action' => 'index',
+                    'action' => 'pdfview',
                     '_ext' => 'pdf'
                 ] + $this->request->query, // there it goes
                 [
@@ -26,11 +26,16 @@
                 'action' => 'export',
                 'ext' => 'csv'
             )); ?></li>
+        <li><?= $this->Html->link('Export DB As CSV', array(
+                'controller' => 'Gun',
+                'action' => 'exportAll',
+                'ext' => 'csv'
+            )); ?></li>
 
     </ul>
 </nav>
 <div class="gun index large-9 medium-12 columns content  ">
-    <h3><?= __('Gun') ?></h3>
+    <h3><?= __('Bound Book') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
@@ -69,7 +74,18 @@
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $gun->ID_GUN]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $gun->ID_GUN]) ?>
-                    <?= $this->Html->link(__('PDF'), ['action' => 'pdf', $gun->ID_GUN]) ?>
+                    <?= $this->Html->link(
+                        'PDF',
+                        [
+                            'action' => 'view',
+                            '_ext' => 'pdf',
+                            $gun->ID_GUN
+                        ] + $this->request->query, // there it goes
+                        [
+                            'class' => 'create-pdf-link',
+                            'target' => 'pdf'
+                        ]
+                    ); ?>
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $gun->ID_GUN], ['confirm' => __('Are you sure you want to delete # {0}?', $gun->ID_GUN)]) ?>
                 </td>
             </tr>

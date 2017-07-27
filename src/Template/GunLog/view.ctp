@@ -4,15 +4,15 @@
   * @var \App\Model\Entity\GunLog $gunLog
   */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<!--<nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Gun Log'), ['action' => 'edit', $gunLog->ID_LOG]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Gun Log'), ['action' => 'delete', $gunLog->ID_LOG], ['confirm' => __('Are you sure you want to delete # {0}?', $gunLog->ID_LOG)]) ?> </li>
-        <li><?= $this->Html->link(__('List Gun Log'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Gun Log'), ['action' => 'add']) ?> </li>
+        <li class="heading"><?/*= __('Actions') */?></li>
+        <li><?/*= $this->Html->link(__('Edit Gun Log'), ['action' => 'edit', $gunLog->ID_LOG]) */?> </li>
+        <li><?/*= $this->Form->postLink(__('Delete Gun Log'), ['action' => 'delete', $gunLog->ID_LOG], ['confirm' => __('Are you sure you want to delete # {0}?', $gunLog->ID_LOG)]) */?> </li>
+        <li><?/*= $this->Html->link(__('List Gun Log'), ['action' => 'index']) */?> </li>
+        <li><?/*= $this->Html->link(__('New Gun Log'), ['action' => 'add']) */?> </li>
     </ul>
-</nav>
+</nav>-->
 <div class="gunLog view large-9 medium-8 columns content">
     <h3><?= h($gunLog->ID_LOG) ?></h3>
     <table class="vertical-table">

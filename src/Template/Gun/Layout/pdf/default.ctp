@@ -34,16 +34,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-<!--        <ul class="title-area large- medium-4 columns">-->
-<!--        <ul class="left">-->
-        <section class="top-bar-section">
-            <ul class="left">
-            <li><?php echo $this->Html->link("Bound Book",array('controller'=>'Gun','action'=>'index'));?></li>
-            <li><?php echo $this->Html->link("Fields",array('controller'=>'Fields','action'=>'index'));?></li>
-            <li><?php echo $this->Html->link("Log",array('controller'=>'GunLog','action'=>'index'));?></li>
-        </ul>
-        </section>
 
     </nav>
     <?= $this->Flash->render() ?>

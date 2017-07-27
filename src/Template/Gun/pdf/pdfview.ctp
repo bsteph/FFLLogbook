@@ -12,19 +12,19 @@
         <thead>
             <tr>
 
-                <th scope="col">'SERIAL'</th>
-                <th scope="col">'MFG'</th>
-                <th scope="col">'MODEL'</th>
-                <th scope="col">'CALIBER'</th>
+                <th scope="col">SERIAL</th>
+                <th scope="col">MFG</th>
+                <th scope="col">MODEL</th>
+                <th scope="col">CALIBER</th>
 
-                <th scope="col">'DATE_ACQ'</th>
-                <th scope="col">'FNAME_ACQ'</th>
-                <th scope="col">'LNAME_ACQ'</th>
-                <th scope="col">'CO_ACQ'</th>
-                <th scope="col">'DATE_DISP'</th>
-                <th scope="col">'FNAME_DISP'</th>
-                <th scope="col">'LNAME_DISP' </th>
-                <th scope="col">'4473 NUMBER' </th>
+                <th scope="col">DATE_ACQ</th>
+                <th scope="col">FNAME_ACQ</th>
+                <th scope="col">LNAME_ACQ</th>
+                <th scope="col">CO_ACQ</th>
+                <th scope="col">DATE_DISP</th>
+                <th scope="col">FNAME_DISP</th>
+                <th scope="col">LNAME_DISP </th>
+                <th scope="col">4473 NUMBER </th>
 
             </tr>
         </thead>
