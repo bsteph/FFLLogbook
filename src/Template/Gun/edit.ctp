@@ -75,6 +75,7 @@
                     'second' => ''
                 )
             ));
+            echo $this->Form->control('F4473_DISP',['label'=>'4473 Serial Number']);
             echo $this->Form->control('PRICE_DISP',['label'=>'Disposed Price']);
             echo $this->Form->control('FNAME_DISP',['label'=>'Disposed First Name']);
             echo $this->Form->control('LNAME_DISP',['label'=>'Disposed Last Name']);

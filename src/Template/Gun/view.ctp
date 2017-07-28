@@ -115,6 +115,10 @@
             <td><?= h($gun->FNAME_DISP) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('4473 Serial Number') ?></th>
+            <td><?= h($gun->F4473_DISP) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('LNAME DISP') ?></th>
             <td><?= h($gun->LNAME_DISP) ?></td>
         </tr>
