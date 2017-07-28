@@ -84,8 +84,16 @@ if (!Configure::read('debug')) {
     Configure::write('Cache._cake_core_.duration', '+1 years');
     Configure::write('SHOWDELETE',true);
 }
-Configure::write('SHOWDELETE',true);
-Configure::read('SHOWDELETE');
+
+if (Configure::read('debug')) {
+    Configure::write('SHOWDELETE', true);
+    Configure::read('SHOWDELETE');
+}
+else {
+    Configure::write('SHOWDELETE', false);
+    Configure::read('SHOWDELETE');
+}
+
 /**
  * Set server timezone to UTC. You can change it to another timezone of your
  * choice but using UTC makes time calculations / conversions easier.
