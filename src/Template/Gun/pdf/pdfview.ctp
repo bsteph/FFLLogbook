@@ -7,8 +7,8 @@
 ?>
 
 <div class="gun index large-9 medium-12 columns content  ">
-    <h3><?= __('Gun') ?></h3>
-    <table cellpadding="2" cellspacing="2">
+    <h3><?= __('Bound Book') ?></h3>
+    <table cellpadding="4" cellspacing="2" border="1px solid black">
         <thead>
             <tr>
 

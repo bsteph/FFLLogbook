@@ -329,7 +329,9 @@ class GunController extends AppController
 
         $this->pdfConfig = array(
             'download' => 'true',
-            'filename' => 'gun.pdf'
+            'filename' => 'gun.pdf',
+            'layout' => 'portrait'
+
         );
 
         $this->set('gun', $gun);
