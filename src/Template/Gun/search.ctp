@@ -1,4 +1,4 @@
-<h2>Search on Serial Number OR Company Acquired OR date range</h2>
+<h2>Search on various fields</h2>
 <?php
 /**
  * Created by PhpStorm.
@@ -14,13 +14,23 @@ echo $this->Form->create();
 echo $this->Form->input('SERIAL');
 echo $this->Form->input('CO_ACQ',array('label'=>'Company Acquired'));
 echo $this->Form->control('BEGIN_DATE', array(
-    'label' => 'Begin Date',
-    'type' => 'date'
+    'label' => 'Acquisitioin Begin Date ',
+    'type' => 'date',
+    'empty' => true
 ));
-echo $this->Form->control('END_DATE', array(
+echo $this->Form->control('Acquisition END_DATE', array(
     'label' => 'End Date',
-    'type' => 'date'
+    'type' => 'date',
+    'empty' => true
 ));
+echo $this->Form->control('MFG',['label' => 'Manufacturer']);
+echo $this->Form->control('IMPORTER');
+echo $this->Form->control('F4473_DISP',['label'=>'4473 Serial Number']);
+echo $this->Form->control('CO_DISP',['label'=>'Disposed Company']);
+echo $this->Form->control('FNAME_DISP',['label'=>'Disposed First Name']);
+echo $this->Form->control('LNAME_DISP',['label'=>'Disposed Last Name']);
+echo $this->Form->control('ADDR1_DISP',['label'=>'Disposed Address 1']);
+
 // Match the search param in your table configuration
 //echo $this->Form->input('q');
 echo $this->Form->button('Filter', ['type' => 'submit']);

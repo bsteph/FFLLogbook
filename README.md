@@ -21,3 +21,24 @@ The engine will need to be installed separately and configured in the app/bootst
 
 Read and edit `config/app.php` and setup the 'Datasources' and any other
 configuration relevant for your application.
+
+Added a new constant called 'SHOWDELETE' in the bootstrap.php to enable deleteting 
+log entries while testing.
+
+## Features
+
+- Trying to make it ATF compliant (https://www.atf.gov/file/104736/download)
+
+- Standard FFL Log book stuff, written to a mysql database that can be backed up
+using mysqldump
+
+- Export Log book for ATF in CSV format
+
+- Export Log book and particular entries in PDF format
+
+- Automatically log any add, change and deletes to the gun database, along with
+  old and new values and timestamped.
+
+- ATF search compliant (#4 from https://www.atf.gov/file/104736/download)
+
+- Record additional Customer information like phone number, email, etc. 
