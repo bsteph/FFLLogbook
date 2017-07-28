@@ -7,7 +7,7 @@
 
 <div class="gun view large-9 medium-8 columns content">
     <h3><?= h($gun->ID_GUN) ?></h3>
-    <table class="vertical-table">
+    <table class="vertical-table" border="1px solid black" cellpadding="4" cellspacing="2">
         <tr>
             <th scope="row"><?= __('SERIAL') ?></th>
             <td><?= h($gun->SERIAL) ?></td>
