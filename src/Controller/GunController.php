@@ -135,9 +135,14 @@ class GunController extends AppController
 
 
     }
-
+    /**
+     * Index method
+     *
+     * @return \Cake\Http\Response|void
+     */
     public function index()
     {
+
         $this->pdfConfig = array(
             'download' => 'true',
             'filename' => 'gun.pdf'
@@ -158,7 +163,6 @@ class GunController extends AppController
         $this->set('type_firearm', $type_firearm);
 
 
-        $this->request->session()->write(['SERIAL', 'CO_ACQ', 'BEGIN_DATE', 'END_DATE', 'MFG', 'IMPORTER', 'CO_DISP', 'FNAME_DISP', 'LNAME_DISP', 'ADDR1_DISP']);
 
         $mfgsearch = $this->request->getData('MFG');
         $importer = $this->request->getData('IMPORTER');
