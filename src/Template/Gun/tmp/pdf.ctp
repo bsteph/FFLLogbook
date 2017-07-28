@@ -1,11 +1,11 @@
 <?php
 $CakePdf = new \CakePdf\Pdf\CakePdf();
-$CakePdf->template('view', 'default');
-$CakePdf->viewVars($this->viewVars);
+$CakePdf->template('pdf', 'default');
+//$CakePdf->viewVars($this->viewVars);
 // Get the PDF string returned
 $pdf = $CakePdf->output();
 // Or write it to file directly
-$pdf = $CakePdf->write(APP . 'files' . DS . 'gun.pdf');
+//$pdf = $CakePdf->write(APP . 'files' . DS . 'gun.pdf');
 /**
   * @var \App\View\AppView $this
   * @var \App\Model\Entity\Gun $gun

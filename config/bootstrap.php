@@ -82,8 +82,10 @@ try {
 if (!Configure::read('debug')) {
     Configure::write('Cache._cake_model_.duration', '+1 years');
     Configure::write('Cache._cake_core_.duration', '+1 years');
+    Configure::write('SHOWDELETE',true);
 }
-
+Configure::write('SHOWDELETE',true);
+Configure::read('SHOWDELETE');
 /**
  * Set server timezone to UTC. You can change it to another timezone of your
  * choice but using UTC makes time calculations / conversions easier.
@@ -204,7 +206,7 @@ DispatcherFactory::add('ControllerFactory');
 Type::build('date')->useLocaleParser();
 Type::build('datetime')->useLocaleParser();
 
-Plugin::load('DebugKit');
+
 Plugin::load('CsvView');
 Plugin::load('Search');
 
