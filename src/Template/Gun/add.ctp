@@ -15,17 +15,20 @@
         <legend><?= __('Add Gun') ?></legend>
         <?php
             echo $this->Form->control('SERIAL');
-            echo $this->Form->label('MFG','MANUFACTURER');
-            echo $this->Form->select('MFG',$mfgs);
+            //echo $this->Form->label('MFG','MANUFACTURER');
+            echo $this->Form->input('MFG', ['type'=>'select','options'=>$mfgs,'empty'=>true,'required'=>true,'label'=>"Manufacturer"]);
             //echo $this->Form->control('MFG');
             echo $this->Form->control('IMPORTER');
+            echo $this->Form->control('MODEL',['required' => true]);
             //echo $this->Form->control('MODEL');
-            echo $this->Form->label('CALIBER','CALIBER');
-            echo $this->Form->select('CALIBER',$caliber);
+            //echo $this->Form->label('CALIBER','CALIBER');
+            echo $this->Form->input('CALIBER',['type'=>'select','options'=>$caliber,'empty'=>true,'required'=>true, 'label'=>'Caliber']);
             //echo $this->Form->control('CALIBER');
-            echo $this->Form->control('ACTION');
-            echo $this->Form->label('TYPE','FIREARM TYPE');
-            echo $this->Form->select('TYPE',$type_firearm);
+            echo $this->Form->label('ACTION','ACTION');
+            echo $this->Form->select('ACTION',$action);
+            echo $this->Form->input('TYPE',['type'=>'select','options'=>$type_firearm,'empty'=>true,'required'=>true, 'label'=>'Firearm Type']);
+            //echo $this->Form->label('TYPE','FIREARM TYPE');
+            //echo $this->Form->select('TYPE',$type_firearm);
             //echo $this->Form->control('TYPE');
             echo $this->Form->control('STDCAP',["label"=>"Standard Capacity"]);
             echo $this->Form->control('MATERIAL');
@@ -51,7 +54,8 @@
             echo $this->Form->control('ADDR1_ACQ',['label'=>'Acquired Address 1']);
             echo $this->Form->control('ADDR2_ACQ',['label'=>'Acquired Address 2']);
             echo $this->Form->control('CITY_ACQ',['label'=>'Acquired City']);
-            echo $this->Form->control('STATE_ACQ',['label'=>'Acquired State']);
+            echo $this->Form->label('STATE_ACQ','State Acquired');
+            echo $this->Form->select('STATE_ACQ',$states);
             echo $this->Form->control('ZIP_ACQ',['label'=>'Acquired Zipcode']);
             echo $this->Form->control('TEL_ACQ',['label'=>'Acquired Telephone']);
             echo $this->Form->control('EMAIL_ACQ',['label'=>'Acquired Email']);

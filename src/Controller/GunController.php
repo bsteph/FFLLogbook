@@ -161,6 +161,14 @@ class GunController extends AppController
             "keyField" => "id",
             "valueField" => 'TYPE_FIREARM_F'])->toArray();
         $this->set('type_firearm', $type_firearm);
+        $states = $this->Fields->find("list", [
+            "keyField" => "id",
+            "valueField" => 'STATES_F'])->toArray();
+        $this->set('states', $states);
+        $action = $this->Fields->find("list", [
+            "keyField" => "id",
+            "valueField" => 'ACTION_F'])->toArray();
+        $this->set('action', $action);
 
 
 
@@ -262,6 +270,14 @@ class GunController extends AppController
             "keyField"=>"id",
             "valueField"=>'TYPE_FIREARM_F'])->toArray();
         $this->set('type_firearm',$type_firearm);
+        $states = $this->Fields->find("list", [
+            "keyField" => "id",
+            "valueField" => 'STATES_F'])->toArray();
+        $this->set('states', $states);
+        $action = $this->Fields->find("list", [
+            "keyField" => "id",
+            "valueField" => 'ACTION_F'])->toArray();
+        $this->set('action', $action);
 
         $serial=$this->request->getData('SERIAL');
         $coacq=$this->request->getData('CO_ACQ');
@@ -326,6 +342,14 @@ class GunController extends AppController
             "keyField"=>"id",
             "valueField"=>'TYPE_FIREARM_F'])->toArray();
         $this->set('type_firearm',$type_firearm);
+        $states = $this->Fields->find("list", [
+            "keyField" => "id",
+            "valueField" => 'STATES_F'])->toArray();
+        $this->set('states', $states);
+        $action = $this->Fields->find("list", [
+            "keyField" => "id",
+            "valueField" => 'ACTION_F'])->toArray();
+        $this->set('action', $action);
 
         $this->pdfConfig = array(
             'download' => 'true',
@@ -358,6 +382,15 @@ class GunController extends AppController
             "keyField"=>"id",
             "valueField"=>'TYPE_FIREARM_F'])->toArray();
         $this->set('type_firearm',$type_firearm);
+        $states = $this->Fields->find("list", [
+            "keyField" => "id",
+            "valueField" => 'STATES_F'])->toArray();
+        $this->set('states', $states);
+        $action = $this->Fields->find("list", [
+            "keyField" => "id",
+            "valueField" => 'ACTION_F'])->toArray();
+        $this->set('action', $action);
+
         $gun = $this->Gun->newEntity();
         if ($this->request->is('post')) {
             $gun = $this->Gun->patchEntity($gun, $this->request->getData());
@@ -397,6 +430,15 @@ class GunController extends AppController
             "keyField"=>"id",
             "valueField"=>'TYPE_FIREARM_F'])->toArray();
         $this->set('type_firearm',$type_firearm);
+        $states = $this->Fields->find("list", [
+            "keyField" => "id",
+            "valueField" => 'STATES_F'])->toArray();
+        $this->set('states', $states);
+        $action = $this->Fields->find("list", [
+            "keyField" => "id",
+            "valueField" => 'ACTION_F'])->toArray();
+        $this->set('action', $action);
+
         if ($this->request->is(['patch', 'post', 'put'])) {
             $gun = $this->Gun->patchEntity($gun, $this->request->getData());
             if ($this->Gun->save($gun)) {

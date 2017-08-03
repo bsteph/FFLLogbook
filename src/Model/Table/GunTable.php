@@ -79,13 +79,15 @@ class GunTable extends Table
             ->add('SERIAL', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         $validator
-            ->allowEmpty('MFG');
+            ->requirePresence('MFG', 'create')
+            ->notEmpty('MFG');
 
         $validator
             ->allowEmpty('IMPORTER');
 
         $validator
-            ->allowEmpty('MODEL');
+            ->requirePresence('MODEL', 'create')
+            ->notEmpty('MODEL');
 
         $validator
             ->allowEmpty('CALIBER');
@@ -94,7 +96,7 @@ class GunTable extends Table
             ->allowEmpty('ACTION');
 
         $validator
-            ->allowEmpty('TYPE');
+            ->notEmpty('TYPE');
 
         $validator
             ->boolean('ANT')
