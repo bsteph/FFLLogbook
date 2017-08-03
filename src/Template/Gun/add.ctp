@@ -15,18 +15,20 @@
         <legend><?= __('Add Gun') ?></legend>
         <?php
             echo $this->Form->control('SERIAL');
-            echo $this->Form->label('MFG','MANUFACTURER');
-            echo $this->Form->select('MFG',$mfgs);
+            //echo $this->Form->label('MFG','MANUFACTURER');
+            echo $this->Form->input('MFG', ['type'=>'select','options'=>$mfgs,'empty'=>true,'required'=>true,'label'=>"Manufacturer"]);
             //echo $this->Form->control('MFG');
             echo $this->Form->control('IMPORTER');
+            echo $this->Form->control('MODEL',['required' => true]);
             //echo $this->Form->control('MODEL');
-            echo $this->Form->label('CALIBER','CALIBER');
-            echo $this->Form->select('CALIBER',$caliber);
+            //echo $this->Form->label('CALIBER','CALIBER');
+            echo $this->Form->input('CALIBER',['type'=>'select','options'=>$caliber,'empty'=>true,'required'=>true, 'label'=>'Caliber']);
             //echo $this->Form->control('CALIBER');
             echo $this->Form->label('ACTION','ACTION');
             echo $this->Form->select('ACTION',$action);
-            echo $this->Form->label('TYPE','FIREARM TYPE');
-            echo $this->Form->select('TYPE',$type_firearm);
+            echo $this->Form->input('TYPE',['type'=>'select','options'=>$type_firearm,'empty'=>true,'required'=>true, 'label'=>'Firearm Type']);
+            //echo $this->Form->label('TYPE','FIREARM TYPE');
+            //echo $this->Form->select('TYPE',$type_firearm);
             //echo $this->Form->control('TYPE');
             echo $this->Form->control('STDCAP',["label"=>"Standard Capacity"]);
             echo $this->Form->control('MATERIAL');
