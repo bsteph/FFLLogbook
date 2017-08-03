@@ -14,7 +14,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('MFG') ?></th>
-            <td><?= h($gun->MFG) ?></td>
+            <td><?= h($mfg[$gun->MFG]) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('IMPORTER') ?></th>
@@ -26,15 +26,15 @@
         </tr>
         <tr>
             <th scope="row"><?= __('CALIBER') ?></th>
-            <td><?= h($gun->CALIBER) ?></td>
+            <td><?= h($caliber[$gun->CALIBER]) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('ACTION') ?></th>
-            <td><?= h($gun->ACTION) ?></td>
+            <td><?= h($action[$gun->ACTION]) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('TYPE') ?></th>
-            <td><?= h($gun->TYPE) ?></td>
+            <td><?= h($type_firearm[$gun->TYPE]) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('MATERIAL') ?></th>
@@ -78,7 +78,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('STATE ACQ') ?></th>
-            <td><?= h($gun->STATE_ACQ) ?></td>
+            <td><?= h($states[$gun->STATE_ACQ]) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('ZIP ACQ') ?></th>
@@ -130,7 +130,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('STATE DISP') ?></th>
-            <td><?= h($gun->STATE_DISP) ?></td>
+            <td><?= h($states[$gun->STATE_DISP]) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('ZIP DISP') ?></th>

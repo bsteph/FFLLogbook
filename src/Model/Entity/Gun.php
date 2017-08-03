@@ -86,4 +86,7 @@ class Gun extends Entity
         '*' => true,
         'ID_GUN' => false
     ];
+    protected $_hidden = [
+        'ID_GUN' => true
+    ];
 }

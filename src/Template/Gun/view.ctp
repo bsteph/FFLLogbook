@@ -40,7 +40,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('ACTION') ?></th>
-            <td><?= h($gun->ACTION) ?></td>
+            <td><?= h($action[$gun->ACTION]) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('TYPE') ?></th>
@@ -88,7 +88,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('STATE ACQ') ?></th>
-            <td><?= h($gun->STATE_ACQ) ?></td>
+            <td><?= h($states[$gun->STATE_ACQ]) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('ZIP ACQ') ?></th>
@@ -144,7 +144,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('STATE DISP') ?></th>
-            <td><?= h($gun->STATE_DISP) ?></td>
+            <td><?= h($states[$gun->STATE_DISP]) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('ZIP DISP') ?></th>

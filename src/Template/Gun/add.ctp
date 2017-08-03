@@ -23,7 +23,8 @@
             echo $this->Form->label('CALIBER','CALIBER');
             echo $this->Form->select('CALIBER',$caliber);
             //echo $this->Form->control('CALIBER');
-            echo $this->Form->control('ACTION');
+            echo $this->Form->label('ACTION','ACTION');
+            echo $this->Form->select('ACTION',$action);
             echo $this->Form->label('TYPE','FIREARM TYPE');
             echo $this->Form->select('TYPE',$type_firearm);
             //echo $this->Form->control('TYPE');
@@ -51,7 +52,8 @@
             echo $this->Form->control('ADDR1_ACQ',['label'=>'Acquired Address 1']);
             echo $this->Form->control('ADDR2_ACQ',['label'=>'Acquired Address 2']);
             echo $this->Form->control('CITY_ACQ',['label'=>'Acquired City']);
-            echo $this->Form->control('STATE_ACQ',['label'=>'Acquired State']);
+            echo $this->Form->label('STATE_ACQ','State Acquired');
+            echo $this->Form->select('STATE_ACQ',$states);
             echo $this->Form->control('ZIP_ACQ',['label'=>'Acquired Zipcode']);
             echo $this->Form->control('TEL_ACQ',['label'=>'Acquired Telephone']);
             echo $this->Form->control('EMAIL_ACQ',['label'=>'Acquired Email']);
