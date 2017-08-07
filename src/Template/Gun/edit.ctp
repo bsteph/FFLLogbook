@@ -27,7 +27,8 @@
             echo $this->Form->control('IMPORTER');
             echo $this->Form->label('CALIBER','CALIBER');
             echo $this->Form->select('CALIBER',$caliber);
-            echo $this->Form->control('ACTION');
+            echo $this->Form->label('ACTION','ACTION');
+            echo $this->Form->select('ACTION',$action);
             echo $this->Form->label('TYPE','FIREARM TYPE');
             echo $this->Form->select('TYPE',$type_firearm);
             echo $this->Form->control('STDCAP',["label"=>"Standard Capacity"]);
@@ -53,7 +54,8 @@
             echo $this->Form->control('ADDR1_ACQ',['label'=>'Acquired Address 1']);
             echo $this->Form->control('ADDR2_ACQ',['label'=>'Acquired Address 2']);
             echo $this->Form->control('CITY_ACQ',['label'=>'Acquired City']);
-            echo $this->Form->control('STATE_ACQ',['label'=>'Acquired State']);
+            echo $this->Form->label('STATE_ACQ','State Acquired');
+            echo $this->Form->select('STATE_ACQ',$states);
             echo $this->Form->control('ZIP_ACQ',['label'=>'Acquired Zipcode']);
             echo $this->Form->control('TEL_ACQ',['label'=>'Acquired Telephone']);
             echo $this->Form->control('EMAIL_ACQ',['label'=>'Acquired Email']);
@@ -66,6 +68,7 @@
             echo $this->Form->control('CR',['label'=>'Curio & Relic']);
             echo $this->Form->control('DATE_DISP', array(
                 'label' => 'Date Disposed',
+                'empty' => true,
                 'selected' => array(
                     'day' => '',
                     'month' => '',
@@ -73,6 +76,7 @@
                     'hour' => '',
                     'minute' => '',
                     'second' => ''
+
                 )
             ));
             echo $this->Form->control('F4473_DISP',['label'=>'4473 Serial Number']);
@@ -84,9 +88,11 @@
             echo $this->Form->control('ADDR1_DISP',['label'=>'Disposed Address 1']);
             echo $this->Form->control('ADDR2_DISP',['label'=>'Disposed Address 2']);
             echo $this->Form->control('CITY_DISP',['label'=>'Disposed City']);
-            echo $this->Form->control('STATE_DISP',['label'=>'Disposed State']);
+            echo $this->Form->label('STATE_DISP','Disposed State');
+
+            echo $this->Form->select('STATE_DISP',$states);
             echo $this->Form->control('ZIP_DISP',['label'=>'Disposed Zip Code']);
-            echo $this->Form->control('EDIT_REASON');
+            echo $this->Form->control('EDIT_REASON',['required' => true]);
             echo $this->Form->control('STATUS');
         ?>
     </fieldset>

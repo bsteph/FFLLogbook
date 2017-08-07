@@ -8,11 +8,11 @@ a:hover {
 }
 
 a {
-    color: #1798A5;
+    color: #1d58a5;
 }
 
 .side-nav li a:not(.button) {
-    color: #15848F;
+    color: #2e57a2;
 }
 
 .side-nav li a:not(.button):hover {
@@ -67,6 +67,7 @@ legend {
 
 .index table thead {
     height: 3.5rem;
+    color: #1d58a5;
 }
 
 .header-help {
@@ -368,16 +369,16 @@ pre {
 }
 
 .top-bar.expanded, .top-bar,.top-bar-section ul li,.top-bar-section li:not(.has-form) a:not(.button) {
-    background: #116d76;
+    background: #2e57a2;
 }
 
 .top-bar-section li:not(.has-form) a:not(.button):hover {
-    background-color: #308e97;
-    background: #308e97;
+    background-color: #1d58a5;
+    background: #1d58a5;
 }
 
 .side-nav li.heading {
-    color: #1798A5;
+    color: #1d58a5;
     font-size: 0.875rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -410,15 +411,16 @@ table tr {
 }
 
 table thead tr {
-    border-bottom: 1px solid #1798A5;
+    border-bottom: 1px solid #1d58a5;
+    color: #1d58a5;
 }
 
 table tr th {
     padding: 0.5625rem 0.625rem;
     font-size: 0.875rem;
-    color: #1798A5;
+    color: #1d58a5;
     text-align: left;
-    border-bottom: 2px solid #1798A5;
+    border-bottom: 2px solid #1d58a5;
 }
 
 table tr:nth-of-type(even) {
@@ -432,7 +434,8 @@ fieldset {
 }
 
 fieldset legend {
-    border-bottom: 2px solid #1798A5;
+    border-bottom: 2px solid #1d58a5;
+    color: #1d58a5;
     width: 100%;
     line-height: 2rem;
 }
@@ -444,12 +447,12 @@ fieldset legend {
 }
 
 .form button:hover, .form button:focus {
-    background: #BE840B;
+    background: #1d58a5;
     box-shadow: none;
 }
 
 button {
-    background: #966600;
+    background: #1d58a5;
 }
 
 div.message {

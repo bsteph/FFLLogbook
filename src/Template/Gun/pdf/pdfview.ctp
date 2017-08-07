@@ -7,16 +7,17 @@
 ?>
 
 <div class="gun index large-9 medium-12 columns content  ">
-    <h3><?= __('Gun') ?></h3>
-    <table cellpadding="2" cellspacing="2">
+    <h3><?= __('Bound Book') ?></h3>
+    <table cellpadding="4" cellspacing="2" border="1px solid black">
         <thead>
             <tr>
 
                 <th scope="col">SERIAL</th>
                 <th scope="col">MFG</th>
+                <th scope="col">IMPORTER</th>
                 <th scope="col">MODEL</th>
                 <th scope="col">CALIBER</th>
-
+                <th scope="col">Firearm Type</th>
                 <th scope="col">DATE_ACQ</th>
                 <th scope="col">FNAME_ACQ</th>
                 <th scope="col">LNAME_ACQ</th>
@@ -34,9 +35,10 @@
 
                 <td><?= h($gun->SERIAL) ?></td>
                 <td><?= h($mfg[$gun->MFG]) ?></td>
+                <td><?= h($gun->IMPORTER) ?></td>
                 <td><?= h($gun->MODEL) ?></td>
                 <td><?= h($caliber[$gun->CALIBER]) ?></td>
-
+                <td><?= h($type_firearm[$gun->TYPE]) ?></td>
                 <td><?= h($gun->DATE_ACQ) ?></td>
                 <td><?= h($gun->FNAME_ACQ) ?></td>
                 <td><?= h($gun->LNAME_ACQ) ?></td>

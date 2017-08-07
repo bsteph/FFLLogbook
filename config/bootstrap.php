@@ -230,9 +230,10 @@ Configure::write('CakePdf', [
         // WKHTMLTOPDF didn't return any data
         // 'binary' => 'C:\\Progra~1\\wkhtmltopdf\\bin\\wkhtmltopdf.exe',
         'options' => [
-            'print-media-type' => false,
+            'print-media-type' => true,
             'outline' => true,
-            'dpi' => 96,
+            'dpi' => 230,
+
             'orientation' =>'landscape'
         ],
     ],

@@ -1,3 +1,5 @@
+# Awesome FFL Log Book [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+
 This is a CakePHP based application.  It requires php 5.6.* and mysql.  
 This application is based on the work from http://www.ar15.com/forums/t_1_5/1252871_.html and here https://sourceforge.net/p/gun/wiki/Instructions/
 
@@ -9,6 +11,7 @@ The code here is still under development ready for beta use.  Please feel free t
 3) import the gun.sql script
 4) run bin/cake server
 5) go to the url lised (http://localhost:8765
+6) Don't forget to backup the database on a daily basis
 
 ## Extra Stuff
 
