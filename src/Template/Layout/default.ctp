@@ -42,6 +42,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <li><?php echo $this->Html->link("Bound Book",array('controller'=>'Gun','action'=>'index'));?></li>
             <li><?php echo $this->Html->link("Fields",array('controller'=>'Fields','action'=>'index'));?></li>
             <li><?php echo $this->Html->link("Log",array('controller'=>'GunLog','action'=>'index'));?></li>
+            <li><?php echo $this->Html->link("Form 4473",array('controller'=>'F4473','action'=>'index'));?></li>
         </ul>
         </section>
 

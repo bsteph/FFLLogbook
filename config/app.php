@@ -208,7 +208,7 @@ return [
         'default' => [
             'className' => 'Cake\Database\Connection',
             'driver' => 'Cake\Database\Driver\Mysql',
-            'persistent' => false,
+            'persistent' => true,
             'host' => 'localhost',
             /**
              * CakePHP will use the default DB port based on the driver selected
@@ -232,7 +232,7 @@ return [
              * decreases performance because each query needs to be traversed and
              * manipulated before being executed.
              */
-            'quoteIdentifiers' => false,
+            'quoteIdentifiers' => true,
 
             /**
              * During development, if using MySQL < 5.6, uncommenting the
