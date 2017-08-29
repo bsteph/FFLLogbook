@@ -22,6 +22,8 @@ use Cake\Utility\Inflector;
 
 /**
  * Task class for generating seed files.
+ *
+ * @property \Bake\Shell\Task\BakeTemplateTask
  */
 class SeedTask extends SimpleBakeTask
 {
