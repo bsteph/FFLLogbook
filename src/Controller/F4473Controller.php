@@ -11,8 +11,27 @@ use App\Controller\AppController;
  * @method \App\Model\Entity\F4473[] paginate($object = null, array $settings = [])
  */
 class F4473Controller extends AppController
-{
 
+{
+    public function search()
+    {
+
+        if ($this->request->is('post')) {
+            $this->request->session()->write(['fname','lname','BEGIN_DATE','END_DATE','name']);
+            $lnamesearch = $this->request->getData('lname');
+            $fnamesearch= $this->request->getData('fname');
+            $namesearch= $this->request->getData('name');
+            $begin_date=$this->request->getData('BEGIN_DATE');
+            $end_date=$this->request->getData('END_DATE');
+
+            return $this->redirect(['action' => 'index','?'=>['fname'=>$fnamesearch,'lnameL'=>$lnamesearch,
+                'BEGIN_DATE'=>$begin_date,'END_DATE'=>$end_date,'name'=>$namesearch]]);
+        }
+
+        $this->set(compact('f4473'));
+        $this->set('_serialize', ['f4473']);
+
+    }
     /**
      * Index method
      *
@@ -20,7 +39,55 @@ class F4473Controller extends AppController
      */
     public function index()
     {
-        $f4473 = $this->paginate($this->F4473);
+        $lnamesearch = $this->request->getData('lname');
+        $fnamesearch= $this->request->getData('fname');
+        $namesearch= $this->request->getData('name');
+        $begin_date=$this->request->getData('BEGIN_DATE');
+        $end_date=$this->request->getData('END_DATE');
+
+        $begin_date_array = $this->request->getData('BEGIN_DATE');
+        $end_date_array = $this->request->getData('END_DATE');
+        if (!empty($begin_date_array)) {
+            $begin_date = implode("-", $begin_date_array);
+        }
+        if (!empty($end_date_array)) {
+            $end_date = implode("-", $end_date_array);
+        }
+
+        if (!empty($lnamesearch) or !empty($fnamesearch) or !empty($namesearch) ) {
+            if (empty($lnamesearch)) {$lnamesearch='bubbagump';};
+            if (empty($fnamesearch)) {$fnamesearch='bubbagump';};
+            if (empty($namesearch)) {$namesearch='bubbagump';};
+
+
+            if ($begin_date!='--') {
+                if ($end_date='--') {
+                    $end_date = date("Y-m-d");
+                }
+            }
+            if ($begin_date=='--') {
+                $begin_date = "1993-10-18";
+                $end_date = "1993-10-18";
+            }
+
+
+            $query = $this->F4473->find('all')
+                ->Where(array(['created >='=> $begin_date],['created <=' => $end_date]))
+                ->orWhere(['fname LIKE' => '%' . $fnamesearch . '%'])
+                ->orWhere(['lname LIKE' => '%' . $lnamesearch . '%'])
+                ->orWhere(['name LIKE' => '%' . $namesearch . '%']);
+
+
+        }
+        else {
+            $query = $this->F4473->find('all');
+        }
+
+        $this->set('f4473', $this->paginate($query));
+
+
+
+        //$f4473 = $this->paginate($this->F4473);
 
         $this->set(compact('f4473'));
         $this->set('_serialize', ['f4473']);
@@ -112,11 +179,14 @@ class F4473Controller extends AppController
             //$file = $this->request->data['file'];
             $file = fread(fopen($this->request->getData('file.tmp_name'), "r"),
                 $this->request->getData('file.size'));
-            $f4473->size=$this->request->getData('file.size');
-            $f4473->type=$this->request->getData('file.type');
-            $f4473->name=$this->request->getData('file.name');
 
-            $f4473->data=$file;
+
+            if ($this->request->getData('file.size')>0) {
+                $f4473->data=$file;
+                $f4473->size=$this->request->getData('file.size');
+                $f4473->type=$this->request->getData('file.type');
+                $f4473->name=$this->request->getData('file.name');
+            }
             if ($this->F4473->save($f4473)) {
                 $this->Flash->success(__('The f4473 has been saved.'));
 

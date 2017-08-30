@@ -8,6 +8,8 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $name
+ * @property string $lname
+ * @property string $fname
  * @property string $type
  * @property int $size
  * @property binary $data

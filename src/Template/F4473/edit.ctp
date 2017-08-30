@@ -20,8 +20,8 @@
     <fieldset>
         <legend><?= __('Edit F4473') ?></legend>
         <?php
-            //echo $this->Form->control('name');
-            //echo $this->Form->control('type');
+            echo $this->Form->control('lname');
+            echo $this->Form->control('fname');
             echo $this->Form->file('file');
         ?>
     </fieldset>
