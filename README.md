@@ -12,6 +12,8 @@ The code here is still under development ready for beta use.  Please feel free t
 4) run bin/cake server
 5) go to the url lised (http://localhost:8765
 6) Don't forget to backup the database on a daily basis
+7) If you're going to run it under Apache, set the document root 
+   as FFLLogbook/webroot
 
 ## Extra Stuff
 
