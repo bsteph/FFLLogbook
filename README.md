@@ -28,6 +28,16 @@ configuration relevant for your application.
 Added a new constant called 'SHOWDELETE' in the bootstrap.php to enable deleteting 
 log entries while testing.
 
+For the 4473 uploads, you may need to update some mysql related settings.
+my.cnf:
+- max_allowed_packet=1024*1024*16; (Allows for files up to 16mb to be sent).
+- connect_timeout=28800; ()prevents "Database Server has gone away" errors)
+
+php.ini:
+- upload_max_filesize=20M
+- default_socket_timeout = 28800
+- mysql.connect_timeout = -1
+
 ## Features
 
 - Trying to make it ATF compliant (https://www.atf.gov/file/104736/download)
@@ -45,3 +55,7 @@ using mysqldump
 - ATF search compliant (#4 from https://www.atf.gov/file/104736/download)
 
 - Record additional Customer information like phone number, email, etc. 
+
+## New changes
+
+- Added support for storing 4473's

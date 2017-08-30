@@ -32,6 +32,20 @@ CREATE TABLE `acc` (
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+CREATE TABLE f4473 (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  name VARCHAR(75) NOT NULL,
+  type VARCHAR(255) NOT NULL,
+  fname VARCHAR(20),
+  lname VARCHAR(45),
+  size INT(11) NOT NULL,
+  data MEDIUMBLOB NOT NULL,
+  created DATETIME,
+  modified DATETIME,
+  PRIMARY KEY (id),
+  PRIMARY KEY (fname),
+  PRIMARY KEY (lname)
+);
 --
 -- Dumping data for table `acc`
 --
@@ -263,7 +277,6 @@ CREATE TABLE `gun` (
   `ID_TYPE_DISP` varchar(87) DEFAULT NULL,
   `ID_AUTH_DISP` varchar(87) DEFAULT NULL,
   `ID_NUM_DISP` varchar(87) DEFAULT NULL,
-  `F4473` blob,
   `F4473_DISP`INT(11) DEFAULT NULL,
   `ALIEN_DOC` varchar(87) DEFAULT NULL,
   `ROUND_COUNT` int(11) DEFAULT NULL,

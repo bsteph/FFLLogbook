@@ -14,7 +14,7 @@ echo $this->Form->create();
 echo $this->Form->input('SERIAL');
 echo $this->Form->input('CO_ACQ',array('label'=>'Company Acquired'));
 echo $this->Form->control('BEGIN_DATE', array(
-    'label' => 'Acquisitioin Begin Date ',
+    'label' => 'Acquisition Begin Date ',
     'type' => 'date',
     'empty' => true
 ));
