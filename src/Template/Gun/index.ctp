@@ -36,7 +36,7 @@
 </nav>
 <div class="gun index large-9 medium-12 columns content  ">
     <h3><?= __('Bound Book') ?></h3>
-    <table cellpadding="6" cellspacing="6">
+    <table style="cellpadding:20; cellspacing:20">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('ID_GUN') ?></th>

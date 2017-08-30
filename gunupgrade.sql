@@ -1,0 +1,18 @@
+use PUBLIC;
+ALTER TABLE `public`.`gun`
+DROP COLUMN `F4473`;
+
+CREATE TABLE f4473 (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  name VARCHAR(75) NOT NULL,
+  type VARCHAR(255) NOT NULL,
+  fname VARCHAR(20),
+  lname VARCHAR(45),
+  size INT(11) NOT NULL,
+  data MEDIUMBLOB NOT NULL,
+  created DATETIME,
+  modified DATETIME,
+  PRIMARY KEY (id),
+  PRIMARY KEY (fname),
+  PRIMARY KEY (lname)
+);
