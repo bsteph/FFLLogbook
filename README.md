@@ -6,27 +6,28 @@ This application is based on the work from http://www.ar15.com/forums/t_1_5/1252
 The code here is still under development ready for beta use.  Please feel free to contribute.
 
 ## Installation
-1) Clone a copy locally
-2) create a mysql database called public
-3) import the gun.sql script
-4) Install wkhtmltopdf
-    a) Go to https://wkhtmltopdf.org/downloads.html
-    b) Download an installer for wkhtmltopdf for your platform
-    c) Install the wkhtmltopdf application
-    d) Edit config/bootstrap.php
-    e) Go to the bottom of the file, at around line 227, change the line that says "'binary' => '/usr/local/bin/wkhtmltopdf'," 
+
+1. Clone a copy locally
+1. create a mysql database called public
+1. import the gun.sql script
+1. Install wkhtmltopdf
+    1. Go to https://wkhtmltopdf.org/downloads.html
+    1. Download an installer for wkhtmltopdf for your platform
+    1. Install the wkhtmltopdf application
+    1. Edit config/bootstrap.php
+    1. Go to the bottom of the file, at around line 227, change the line that says "'binary' => '/usr/local/bin/wkhtmltopdf'," 
        to point to your installation of wkhtmltopdf
-5) Update config/app.php datasources configuration to point to your database
-    a) edit app.php
-    b) go to around line 212
-        i)  modify the host entry
-        ii)  modify the username entry
-        iii) modify the password entry
-        iv)  modify the database (database name) if necessary
-6) run bin/cake server
-7) go to the url lised (http://localhost:8765
-8) Don't forget to backup the database on a daily basis
-9) If you're going to run it under Apache (instead of step 9 and 10), set the document root 
+1. Update config/app.php datasources configuration to point to your database
+    1. edit app.php
+    1. go to around line 212
+        1. modify the host entry
+        1. modify the username entry
+        1. modify the password entry
+        1. modify the database (database name) if necessary
+1. run bin/cake server
+1. go to the url lised (http://localhost:8765)
+1. **Don't forget to backup the database on a daily basis**
+1. If you're going to run it under Apache (instead of step 6 and 7), set the document root 
     as FFLLogbook/webroot
 
 ## Extra Stuff
@@ -35,14 +36,16 @@ This project makes use of friendsofcake/cakepdf: https://github.com/FriendsOfCak
 It's currently configured to use the wkhtmltopdf engine http://wkhtmltopdf.org/
 The engine will need to be installed separately and configured in the config/bootstrap.pdf
 
+See Installation instructions above
+
 
 ## Misc Configuration
 
 Read and edit `config/app.php` and setup the 'Datasources' and any other
 configuration relevant for your application.
 
-Added a new constant called 'SHOWDELETE' in the bootstrap.php to enable deleteting 
-log entries while testing.
+Set debug => true on line 13 of config/app.php while testing so it doesn't log modifications
+
 
 For the 4473 uploads, you may need to update some mysql related settings.
 my.cnf:
