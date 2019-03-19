@@ -6,6 +6,7 @@ This application is based on the work from http://www.ar15.com/forums/t_1_5/1252
 The code here is still under development ready for beta use.  Please feel free to contribute.
 
 ## Installation
+
 1. Clone a copy locally
 1. create a mysql database called public
 1. import the gun.sql script
@@ -34,6 +35,7 @@ The code here is still under development ready for beta use.  Please feel free t
 This project makes use of friendsofcake/cakepdf: https://github.com/FriendsOfCake/CakePdf
 It's currently configured to use the wkhtmltopdf engine http://wkhtmltopdf.org/
 The engine will need to be installed separately and configured in the config/bootstrap.pdf
+
 See Installation instructions above
 
 
