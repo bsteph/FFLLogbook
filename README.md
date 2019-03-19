@@ -9,20 +9,34 @@ The code here is still under development ready for beta use.  Please feel free t
 1) Clone a copy locally
 2) create a mysql database called public
 3) import the gun.sql script
-4) run bin/cake server
-5) go to the url lised (http://localhost:8765
-6) Don't forget to backup the database on a daily basis
-7) If you're going to run it under Apache, set the document root 
-   as FFLLogbook/webroot
+4) Install wkhtmltopdf
+    a) Go to https://wkhtmltopdf.org/downloads.html
+    b) Download an installer for wkhtmltopdf for your platform
+    c) Install the wkhtmltopdf application
+    d) Edit config/bootstrap.php
+    e) Go to the bottom of the file, at around line 227, change the line that says "'binary' => '/usr/local/bin/wkhtmltopdf'," 
+       to point to your installation of wkhtmltopdf
+5) Update config/app.php datasources configuration to point to your database
+    a) edit app.php
+    b) go to around line 212
+        i)  modify the host entry
+        ii)  modify the username entry
+        iii) modify the password entry
+        iv)  modify the database (database name) if necessary
+6) run bin/cake server
+7) go to the url lised (http://localhost:8765
+8) Don't forget to backup the database on a daily basis
+9) If you're going to run it under Apache (instead of step 9 and 10), set the document root 
+    as FFLLogbook/webroot
 
 ## Extra Stuff
 
 This project makes use of friendsofcake/cakepdf: https://github.com/FriendsOfCake/CakePdf
 It's currently configured to use the wkhtmltopdf engine http://wkhtmltopdf.org/
-The engine will need to be installed separately and configured in the app/bootstrap.pdf
+The engine will need to be installed separately and configured in the config/bootstrap.pdf
 
 
-## Configuration
+## Misc Configuration
 
 Read and edit `config/app.php` and setup the 'Datasources' and any other
 configuration relevant for your application.
