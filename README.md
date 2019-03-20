@@ -5,6 +5,8 @@ This application is based on the work from http://www.ar15.com/forums/t_1_5/1252
 
 The code here is still under development ready for beta use.  Please feel free to contribute.
 
+**Check out the screen shots in the screenshot directory**
+
 ## Installation
 
 1. Clone a copy locally
